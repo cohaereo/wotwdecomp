@@ -1,0 +1,13 @@
+_SDA_BASE_ = 0x802613A0;
+_SDA2_BASE_ = 0x802713A0;
+SECTIONS
+{
+    .init BIND(0X80003100) : { *(.init) }
+    .text BIND(0X800034A0) : { *(.text) }
+    .ctors BIND(0X800EEAC0) : { *(.data0) }
+    .rodata BIND(0X800EEB60) : { *(.rodata) }
+    .data2 BIND(0X800FB580) : { *(.data2) }
+    .data3 BIND(0X802593A0) : { *(.data3) }
+    .data4 BIND(0X80259F80) : { *(.data4) }
+    .bss BIND(0x80192480) : { *(.bss) }
+}
