@@ -12,7 +12,7 @@ endif
 # Files
 #-------------------------------------------------------------------------------
 
-OBJ_DIR := obj
+OBJ_DIR := build
 
 SRC_DIRS := src
 ASM_DIRS := asm
@@ -30,7 +30,7 @@ MAP     := wotw.map
 include obj_files.mk
 
 O_FILES := 	$(INIT_O_FILES) $(TEXT_O_FILES) $(CTORS_O_FILES) $(RODATA_O_FILES) \
-			$(DATA2_O_FILES) $(DATA3_O_FILES) $(DATA4_O_FILES) $(BSS_O_FILES) \
+			$(DATA_O_FILES) $(SDATA_O_FILES) $(SDATA2_O_FILES) $(BSS_O_FILES) 
 
 #-------------------------------------------------------------------------------
 # Tools
@@ -44,15 +44,15 @@ else
 endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
 OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
-CC      := $(WINE) mwcc_compiler/mwcceppc.exe
-LD      := $(WINE) mwcc_compiler/mwldeppc.exe -nodefaults
+CC      := $(WINE) mwcc_compiler/2.4.1/mwcceppc.exe
+LD      := $(WINE) mwcc_compiler/2.4.1/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
 
 # Options
 ASFLAGS := -mgekko -I include
 LDFLAGS := -map $(MAP)
-CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -O2,p -i include
+CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -O4,p -i include
 
 #-------------------------------------------------------------------------------
 # Recipes
@@ -70,7 +70,7 @@ $(DOL): $(ELF) | tools
 	$(SHA1SUM) -c wotw.sha1
 
 clean:
-	rm -f $(DOL) $(ELF) $(O_FILES) $(MAP)
+	rm -f -d -r $(OBJ_DIR)
 	$(MAKE) -C tools clean
 
 tools:
