@@ -44,8 +44,8 @@ else
 endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
 OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
-CC      := $(WINE) mwcc_compiler/mwcceppc.exe
-LD      := $(WINE) mwcc_compiler/mwldeppc.exe
+CC      := $(WINE) mwcc_compiler/mwcceppc.exe -nodefaults
+LD      := $(WINE) mwcc_compiler/mwldeppc.exe -nodefaults
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
 
