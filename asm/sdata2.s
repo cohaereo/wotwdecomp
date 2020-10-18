@@ -160,8 +160,8 @@ lbl_8025AA98:
 .global lbl_8025AA9C
 lbl_8025AA9C:
 	.incbin "baserom.dol", 0x19057C, 0xC
-.global lbl_8025AAA8
-lbl_8025AAA8:
+.global __GXData
+__GXData:
 	.incbin "baserom.dol", 0x190588, 0x4
 .global lbl_8025AAAC
 lbl_8025AAAC:

@@ -207,8 +207,8 @@ lbl_802594D4:
 .global lbl_802594DC
 lbl_802594DC:
 	.incbin "baserom.dol", 0x18F59C, 0x4
-.global lbl_802594E0
-lbl_802594E0:
+.global __OSCurrHeap
+__OSCurrHeap:
 	.incbin "baserom.dol", 0x18F5A0, 0x8
 .global lbl_802594E8
 lbl_802594E8:
@@ -270,14 +270,14 @@ lbl_802595E4:
 .global lbl_802595F0
 lbl_802595F0:
 	.incbin "baserom.dol", 0x18F6B0, 0x4
-.global lbl_802595F4
-lbl_802595F4:
+.global ResettingChan
+ResettingChan:
 	.incbin "baserom.dol", 0x18F6B4, 0x4
 .global lbl_802595F8
 lbl_802595F8:
 	.incbin "baserom.dol", 0x18F6B8, 0x4
-.global lbl_802595FC
-lbl_802595FC:
+.global AnalogMode
+AnalogMode:
 	.incbin "baserom.dol", 0x18F6BC, 0x4
 .global lbl_80259600
 lbl_80259600:
@@ -321,32 +321,32 @@ lbl_80259644:
 .global lbl_80259648
 lbl_80259648:
 	.incbin "baserom.dol", 0x18F708, 0x8
-.global lbl_80259650
-lbl_80259650:
+.global GXTexMode0Ids
+GXTexMode0Ids:
 	.incbin "baserom.dol", 0x18F710, 0x8
-.global lbl_80259658
-lbl_80259658:
+.global GXTexMode1Ids
+GXTexMode1Ids:
 	.incbin "baserom.dol", 0x18F718, 0x8
-.global lbl_80259660
-lbl_80259660:
+.global GXTexImage0Ids
+GXTexImage0Ids:
 	.incbin "baserom.dol", 0x18F720, 0x8
-.global lbl_80259668
-lbl_80259668:
+.global GXTexImage1Ids
+GXTexImage1Ids:
 	.incbin "baserom.dol", 0x18F728, 0x8
-.global lbl_80259670
-lbl_80259670:
+.global GXTexImage2Ids
+GXTexImage2Ids:
 	.incbin "baserom.dol", 0x18F730, 0x8
-.global lbl_80259678
-lbl_80259678:
+.global GXTexImage3Ids
+GXTexImage3Ids:
 	.incbin "baserom.dol", 0x18F738, 0x8
-.global lbl_80259680
-lbl_80259680:
+.global GXTexTlutIds
+GXTexTlutIds:
 	.incbin "baserom.dol", 0x18F740, 0x8
 .global lbl_80259688
 lbl_80259688:
 	.incbin "baserom.dol", 0x18F748, 0x10
-.global lbl_80259698
-lbl_80259698:
+.global __GXVersion
+__GXVersion:
 	.incbin "baserom.dol", 0x18F758, 0x8
 .global lbl_802596A0
 lbl_802596A0:

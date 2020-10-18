@@ -228,10 +228,10 @@ lbl_800EEDAC:
 	.incbin "baserom.dol", 0xEBDAC, 0x2C
 .global lbl_800EEDD8
 lbl_800EEDD8:
-	.incbin "baserom.dol", 0xEBDD8, 0x4
+	.float 640.0
 .global lbl_800EEDDC
 lbl_800EEDDC:
-	.incbin "baserom.dol", 0xEBDDC, 0x4
+	.float 480.0
 .global lbl_800EEDE0
 lbl_800EEDE0:
 	.incbin "baserom.dol", 0xEBDE0, 0x4
@@ -8151,7 +8151,7 @@ lbl_800F7DC0:
 	.incbin "baserom.dol", 0xF4DC0, 0x4
 .global lbl_800F7DC4
 lbl_800F7DC4:
-	.incbin "baserom.dol", 0xF4DC4, 0x4
+	.float 1.3333334
 .global lbl_800F7DC8
 lbl_800F7DC8:
 	.incbin "baserom.dol", 0xF4DC8, 0x4
@@ -8166,7 +8166,7 @@ lbl_800F7DD4:
 	.incbin "baserom.dol", 0xF4DD4, 0x4
 .global lbl_800F7DD8
 lbl_800F7DD8:
-	.incbin "baserom.dol", 0xF4DD8, 0x4
+	.float 1.0
 .global lbl_800F7DDC
 lbl_800F7DDC:
 	.incbin "baserom.dol", 0xF4DDC, 0x4
