@@ -446,8 +446,8 @@ __GXWriteFifoIntReset:
 /* 800A415C 000A115C  B0 03 00 04 */	sth r0, 4(r3)
 /* 800A4160 000A1160  4E 80 00 20 */	blr 
 
-.global func_800A4164
-func_800A4164:
+.global GXSetCurrentGXThread
+GXSetCurrentGXThread:
 /* 800A4164 000A1164  7C 08 02 A6 */	mflr r0
 /* 800A4168 000A1168  90 01 00 04 */	stw r0, 4(r1)
 /* 800A416C 000A116C  94 21 FF F0 */	stwu r1, -0x10(r1)
