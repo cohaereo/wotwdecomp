@@ -76,7 +76,7 @@ clean:
 tools:
 	$(MAKE) -C tools
 
-$(ELF): $(O_FILES) $(LDSCRIPT)
+$(ELF): baserom.dol $(O_FILES) $(LDSCRIPT)
 	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) $(O_FILES)
 # The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
 	$(OBJCOPY) $@ $@
