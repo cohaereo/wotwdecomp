@@ -1,5 +1,13 @@
 # Tom and Jerry: War of the Whiskers
 
+```diff
+- WARNING! -
+
+The ROM this repository builds cannot be 'shifted', primarily due to some hardcoded pointers which have yet
+to be dumped. Thus this repository is currently in an experimental and research phase and cannot yet be used
+traditionally as a source code base for general changes.
+```
+
 This repo contains a WIP decompilation of Tom and Jerry: War of the Whiskers.
 
 It builds the following DOL:
