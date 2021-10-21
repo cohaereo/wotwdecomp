@@ -2,9 +2,22 @@
 
 // #define NON_MATCHING
 
+#define LANG_LANGUAGE_COUNT 6
+#define LANG_STRING_COUNT 274
+#define LANG_STING_LENGTH 255
+
 extern u8 g_Language;
-extern char g_LanguageStringTable[6][274][255];
-extern u32* lbl_8010F515;
+extern char g_LanguageStringTable[LANG_LANGUAGE_COUNT][LANG_STRING_COUNT][LANG_STING_LENGTH];
+
+enum Language {
+    LANG_ENGLISH = 0,
+    LANG_FRENCH = 1,
+    LANG_GERMAN = 2,
+    LANG_SPANISH = 3,
+    LANG_ITALIAN = 4,
+    LANG_DUTCH = 5,
+    LANG_COUNT,
+};
 
 bool LANG_IsLanguageValid();
 
@@ -71,7 +84,7 @@ void asm LANG_SetLanguage(u8 a1) {
 
 #ifdef NON_MATCHING
 bool LANG_IsLanguageValid() {
-    return g_Language < 6; // Works with GCC, not with MWCC
+    return g_Language < LANG_COUNT; // Works with GCC, not with MWCC
 }
 #else
 bool asm LANG_IsLanguageValid() {
