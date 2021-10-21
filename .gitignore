@@ -10,3 +10,4 @@ mwcc_compiler/
 # Temporary files
 *.dump
 .vscode/
+game/
