@@ -7,3 +7,5 @@ typedef unsigned short u16;
 typedef unsigned int u32;
 
 typedef unsigned char bool;
+
+#define STATIC_ASSERT(COND,MSG) static int static_assertion_##MSG[(COND)?1:-1]

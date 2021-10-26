@@ -5,6 +5,8 @@ TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/text_0x800034a0.o                \
     $(OBJ_DIR)/src/text_0x8000af6c.o                \
     $(OBJ_DIR)/asm/text_0x8000afb4.o                \
+    $(OBJ_DIR)/src/main.o                           \
+    $(OBJ_DIR)/asm/text_0x8000f15c.o                \
     $(OBJ_DIR)/src/language.o                       \
     $(OBJ_DIR)/asm/text_0x8001009c.o                \
                                                     \
