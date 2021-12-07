@@ -5,7 +5,9 @@ SECTIONS
     .ctors BIND(0X800EEAC0)     : { *(.ctors) }
     .rodata BIND(0X800EEB60)    : { *(.rodata) }
     .data BIND(0X800FB580)     : { *(.data) }
-    .sdata BIND(0X802593A0)     : { *(.sdata) }
-    .sdata2 BIND(0X80259F80)     : { *(.sdata2) }
     .bss BIND(0X80192480)       : { *(.bss) }
+    .sdata BIND(0X802593A0)     : { *(.sdata) }
+    .sbss                        : { *(.sbss) }
+    .sdata2 BIND(0X80259F80)     : { *(.sdata2) }
+    .sbss2                      : { *(.sbss2) }
 }

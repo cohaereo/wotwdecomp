@@ -1,4 +1,4 @@
-.section .sdata2, "wa"  # 0x80259F80 - 0x8025AFC0
+.section .sdata2  # 0x80259F80 - 0x8025AFC0
 
 	.incbin "baserom.dol", 0x18FA60, 0x20
 .global lbl_80259FA0

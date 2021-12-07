@@ -21,7 +21,7 @@ enum Language {
 
 bool LANG_IsLanguageValid();
 
-#ifdef NON_MATCHING
+#if 1
 char* LANG_GetString(int string_index) {
     if (!LANG_IsLanguageValid()) {
         return g_LanguageStringTable[0][36];
@@ -30,106 +30,102 @@ char* LANG_GetString(int string_index) {
     return g_LanguageStringTable[g_Language][string_index];
 }
 #else
-void asm LANG_GetString() {
-    nofralloc
-    stwu r1, -0x10(r1)
-    mflr r0
-    stw r31, 0xc(r1)
-    stw r0, 0x14(r1)
-    mr r31, r3
-    bl LANG_IsLanguageValid
-    cmpwi r3, 0
-    beq lbl_80010024
-    lis r9, g_Language@ha
-    lis r0, 0x110EE@h
-    lbz r11, g_Language@l(r9)
-    ori r0, r0, 0x110EE@l
-    slwi r3, r31, 8
-    lis r9, g_LanguageStringTable@ha
-    mullw r11, r11, r0
-    subf r3, r31, r3
-    addi r9, r9, g_LanguageStringTable@l
-    add r3, r3, r9
-    add r3, r11, r3
-    b lbl_8001002C
-lbl_80010024:
-    lis r3, g_LanguageStringTable+0x23dc@ha
-    addi r3, r3, g_LanguageStringTable+0x23dc@l
-lbl_8001002C:
-    lwz r0, 0x14(r1)
-    mtlr r0
-    lwz r31, 0xc(r1)
-    addi r1, r1, 0x10
-    blr 
+__ASM void LANG_GetString() {
+    asm volatile(
+    "stwu 1, -0x10(1)\t\n"
+    "mflr 0\t\n"
+    "stw 31, 0xc(1)\t\n"
+    "stw 0, 0x14(1)\t\n"
+    "mr 31, 3\t\n"
+    "bl LANG_IsLanguageValid\t\n"
+    "cmpwi 3, 0\t\n"
+    "beq lbl_80010024\t\n"
+    "lis 9, g_Language@ha\t\n"
+    "lis 0, 0x110EE@h\t\n"
+    "lbz 11, g_Language@l(9)\t\n"
+    "ori 0, 0, 0x110EE@l\t\n"
+    "slwi 3, 31, 8\t\n"
+    "lis 9, g_LanguageStringTable@ha\t\n"
+    "mullw 11, 11, 0\t\n"
+    "subf 3, 31, 3\t\n"
+    "addi 9, 9, g_LanguageStringTable@l\t\n"
+    "add 3, 3, 9\t\n"
+    "add 3, 11, 3\t\n"
+    "b lbl_8001002C\t\n"
+"lbl_80010024:\t\n"
+    "lis 3, g_LanguageStringTable+0x23dc@ha\t\n"
+    "addi 3, 3, g_LanguageStringTable+0x23dc@l\t\n"
+"lbl_8001002C:\t\n"
+    "lwz 0, 0x14(1)\t\n"
+    "mtlr 0\t\n"
+    "lwz 31, 0xc(1)\t\n"
+    "addi 1, 1, 0x10\t\n"
+    );
 }
 #endif
 
 extern u8 lbl_801A5C04;
 
-#ifdef NON_MATCHING
+#if 1
 void LANG_SetLanguage(u8 a1) {
     g_Language = a1;
     lbl_801A5C04 = a1;
 }
 #else
-void asm LANG_SetLanguage(u8 a1) {
-    nofralloc
-    lis r9, g_Language@ha
-    lis r11, lbl_801A5C04@ha
-    stb r3, g_Language@l(r9)
-    stb r3, lbl_801A5C04@l(r11)
-    blr 
+__ASM void LANG_SetLanguage(u8 a1) {
+    asm volatile(
+    "lis 9, g_Language@ha\t\n"
+    "lis 11, lbl_801A5C04@ha\t\n"
+    "stb 3, g_Language@l(9)\t\n"
+    "stb 3, lbl_801A5C04@l(11)\t\n"
+    );
 }
 #endif
 
-#ifdef NON_MATCHING
-#pragma push
-#pragma peephole off
-#pragma optimization_level 1
+#if 1
 bool LANG_IsLanguageValid() {
     return g_Language < LANG_COUNT; // Works with GCC, not with MWCC
 }
-#pragma pop
 #else
-bool asm LANG_IsLanguageValid() {
-    nofralloc
-    lis r9, g_Language@ha
-    lbz r3, g_Language@l(r9)
-    subfic r3, r3, LANG_LANGUAGE_COUNT-1
-    li r3, 0
-    adde r3, r3, r3
-    blr 
+__ASM bool LANG_IsLanguageValid() {
+    asm volatile(
+    "lis 9, g_Language@ha\t\n"
+    "lbz 3, g_Language@l(9)\t\n"
+    "subfic 3, 3, 5\t\n"
+    "li 3, 0\t\n"
+    "adde 3, 3, 3\t\n"
+    );
 }
 #endif
 
-#ifdef NON_MATCHING
+#if 1
 u8 LANG_GetLanguage() {
     return g_Language; // Works with GCC, not with MWCC
 }
 #else
-asm u8 LANG_GetLanguage() {
-    nofralloc
-    lis r9, g_Language@ha
-    lbz r3, g_Language@l(r9)
-    blr 
+__ASM u8 LANG_GetLanguage() {
+    asm volatile(
+    "lis 9, g_Language@ha\t\n"
+    "lbz 3, g_Language@l(9)\t\n"
+    );
 }
 #endif
 
-#ifdef NON_MATCHING
+#if 1
 void LANG_ResetLanguage() {
     LANG_SetLanguage(0);
 }
 #else
-asm void LANG_ResetLanguage() {
-    nofralloc
-    stwu r1, -8(r1)
-    mflr r0
-    stw r0, 0xc(r1)
-    li r3, 0
-    bl LANG_SetLanguage
-    lwz r0, 0xc(r1)
-    mtlr r0
-    addi r1, r1, 8
-    blr 
+__ASM void LANG_ResetLanguage() {
+    asm volatile(
+    "stwu 1, -8(1)\t\n"
+    "mflr 0\t\n"
+    "stw 0, 0xc(1)\t\n"
+    "li 3, 0\t\n"
+    "bl LANG_SetLanguage\t\n"
+    "lwz 0, 0xc(1)\t\n"
+    "mtlr 0\t\n"
+    "addi 1, 1, 8\t\n"
+    );
 }
 #endif

@@ -44,7 +44,7 @@ else
 endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
 OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
-CC      := $(WINE) mwcc_compiler/mwcceppc.exe
+CC      := $(WINE) ngccc
 LD      := $(WINE) mwcc_compiler/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
@@ -52,7 +52,8 @@ SHA1SUM := sha1sum
 # Options
 ASFLAGS := -mgekko -I include
 LDFLAGS := -map $(MAP) -fp hard -nodefaults
-CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -O3,s -nodefaults -i include -sdatathreshold 0
+CFLAGS  := -O2 -I include -nostdlib -G 0
+# CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -O3,s -nodefaults -i include -sdatathreshold 0
 
 #-------------------------------------------------------------------------------
 # Recipes
@@ -85,4 +86,4 @@ $(OBJ_DIR)/%.o: %.s
 	$(AS) $(ASFLAGS) -o $@ $<
 
 $(OBJ_DIR)/%.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -T $(LDSCRIPT) -c -o $@ $<
