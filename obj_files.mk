@@ -2,7 +2,6 @@ INIT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/init.o
 
 TEXT_O_FILES :=                                     \
-    $(OBJ_DIR)/src/test.o                           \
     $(OBJ_DIR)/asm/text.o                   		\
 
 CTORS_O_FILES :=                                    \
