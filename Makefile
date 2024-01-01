@@ -14,7 +14,7 @@ endif
 
 OBJ_DIR := build
 
-SRC_DIRS := src
+SRC_DIRS := src src/Main
 ASM_DIRS := asm asm/dvd asm/gx asm/ai asm/ar asm/vi
 
 # Inputs
@@ -85,5 +85,5 @@ $(ELF): baserom.dol $(O_FILES) $(LDSCRIPT)
 $(OBJ_DIR)/%.o: %.s
 	$(AS) $(ASFLAGS) -o $@ $<
 
-$(OBJ_DIR)/%.o: %.c
+$(OBJ_DIR)/%.o: %.cpp
 	$(CC) $(CFLAGS) -T $(LDSCRIPT) -c -o $@ $<
