@@ -14,7 +14,7 @@ endif
 
 OBJ_DIR := build
 
-SRC_DIRS := src src/Main
+SRC_DIRS := src src/Main src/Dundee/Misc
 ASM_DIRS := asm asm/dvd asm/gx asm/ai asm/ar asm/vi
 
 # Inputs
@@ -76,6 +76,8 @@ clean:
 
 tools:
 	$(MAKE) -C tools
+
+build_nolink: $(O_FILES)
 
 $(ELF): baserom.dol $(O_FILES) $(LDSCRIPT)
 	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) $(O_FILES)
