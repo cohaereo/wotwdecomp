@@ -9,3 +9,5 @@ typedef unsigned int u32;
 typedef unsigned char bool;
 
 #define STATIC_ASSERT(COND,MSG) static int static_assertion_##MSG[(COND)?1:-1]
+
+#define __ASM __attribute__ ((naked))

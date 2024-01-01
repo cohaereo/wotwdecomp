@@ -45,7 +45,7 @@ TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/gx/GXPerf.o                      \
                                                     \
     $(OBJ_DIR)/asm/text_0x800a3b3c.o                \
-    $(OBJ_DIR)/src/text_0x800c6ea4.o                \
+    $(OBJ_DIR)/asm/text_0x800c6ea4.o                \
     $(OBJ_DIR)/asm/text_0x800c7298.o                \
     $(OBJ_DIR)/asm/gx/GXDisplayList.o               \
     $(OBJ_DIR)/asm/text_0x800d1554.o                \
