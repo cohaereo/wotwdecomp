@@ -1,4 +1,4 @@
-#include "types.h"
+#include "prelude.h"
 #include "SpecialEvents/SE_Kitchen.h"
 #include "DUN_Random.h"
 
@@ -502,7 +502,7 @@ void CKitchenSE::SwitchOff() {
 
 	this->ResetTextures(false);
 	if(*(u32 *)((u32)this + 0xbc) == 0) {
-		g_pGameGlob->mAudio->StartLevelSound(0);                                                               
+		PFIELD(g_pGameGlob, CAudio, 0x2d894)->StartLevelSound(0);
 		musunk_FUN_8007c274(iVar1 + 0xc0,auStack24);
 		musunk_FUN_8007c2f0(auStack24);
 

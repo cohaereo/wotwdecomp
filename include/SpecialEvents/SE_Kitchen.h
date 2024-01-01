@@ -1,9 +1,6 @@
 #pragma once
 #include "types.h"
 
-struct AI_AVOIDANCE_INSTANCE {};
-struct COL_SPHERE {};
-
 class CKitchenSE {
 public:
     void SwitchOff();

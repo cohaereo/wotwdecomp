@@ -1,11 +1,6 @@
 #pragma once
 #include "types.h"
 
-// TODO: Move
-struct PSR_COLOUR {
-    u32 r, g, b, a;
-};
-
 class CFade {
 public:
     CFade();

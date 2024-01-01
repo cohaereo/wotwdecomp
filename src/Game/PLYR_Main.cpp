@@ -5527,21 +5527,21 @@ dontmangle __ASM void TornadoRelease__7CPlayerP5Vec3Ff() {
 extern f32 lbl_800F4748;
 void CPlayer::ZeroAllVelocities() {
 	f32 zero = lbl_800F4748;
-	*(f32*)((u32)this + 0xb318) = zero;
-	*(f32*)((u32)this + 0xb31c) = zero;
-	*(f32*)((u32)this + 0xb320) = zero;
+	CFIELD(f32, 0xb318) = zero;
+	CFIELD(f32, 0xb31c) = zero;
+	CFIELD(f32, 0xb320) = zero;
 
-	*(f32*)((u32)this + 0xb30c) = zero;
-	*(f32*)((u32)this + 0xb310) = zero;
-	*(f32*)((u32)this + 0xb314) = zero;
+	CFIELD(f32, 0xb30c) = zero;
+	CFIELD(f32, 0xb310) = zero;
+	CFIELD(f32, 0xb314) = zero;
 
-	*(f32*)((u32)this + 0xb2dc) = zero;
-	*(f32*)((u32)this + 0xb2e0) = zero;
-	*(f32*)((u32)this + 0xb2e4) = zero;
-
-	*(f32*)((u32)this + 0xb324) = zero;
-	*(f32*)((u32)this + 0xb328) = zero;
-	*(f32*)((u32)this + 0xb32c) = zero;
+	CFIELD(f32, 0xb2dc) = zero;
+	CFIELD(f32, 0xb2e0) = zero;
+	CFIELD(f32, 0xb2e4) = zero;
+	
+	CFIELD(f32, 0xb324) = zero;
+	CFIELD(f32, 0xb328) = zero;
+	CFIELD(f32, 0xb32c) = zero;
 }
 
 #if 0
@@ -5996,9 +5996,9 @@ dontmangle __ASM void StopConcreteBoots__7CPlayer() {
 #endif
 
 void CPlayer::ApplyForceToPlayer(Vec3F* force) {
-	*(f32*)((u32)this + 0xb2dc) = force->x;
-	*(f32*)((u32)this + 0xb2e0) = force->y;
-	*(f32*)((u32)this + 0xb2e4) = force->z;
+	CFIELD(f32, 0xb2dc) = force->x;
+	CFIELD(f32, 0xb2e0) = force->y;
+	CFIELD(f32, 0xb2e4) = force->z;
 }
 
 #if 0
@@ -6609,7 +6609,7 @@ dontmangle __ASM void func_80044610() {
 extern char* TXT_GetString(u16 stringIndex);
 
 char* CPlayer::GetPlayerName() {
-	u8 player = *(u8 *)((u32)this + 0xb385);
+	u8 player = CFIELD(u8, 0xb385);
 	u16 stringIndex;
 	if(player == 0)
 		stringIndex = 0x12;
@@ -6626,7 +6626,7 @@ char* CPlayer::GetPlayerName() {
 }
 
 char* CPlayer::GetTeamName() {
-	u8 team = *(u8 *)((u32)this + 0xb386);
+	u8 team = CFIELD(u8, 0xb386);
 	u16 stringIndex;
 	if(team == 0)
 		stringIndex = 0xca;
