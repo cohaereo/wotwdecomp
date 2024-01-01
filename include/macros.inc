@@ -98,3 +98,13 @@ Entry Point: 0x80003100
 .set _SDA_BASE_, 0x802613A0
 # Small Data Area (read only) Base
 .set _SDA2_BASE_, 0x802713A0
+
+.macro	string_align str
+.string	"\str"
+.balign 8, 0
+.endm
+
+.macro	string_align4 str
+.string	"\str"
+.balign 4, 0
+.endm

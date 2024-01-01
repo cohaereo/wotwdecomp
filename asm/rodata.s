@@ -1,3 +1,5 @@
+.include "macros.inc"
+
 .section .rodata  # 0x800EEB60 - 0x800FB580
 
 	.incbin "baserom.dol", 0xEBB60, 0x18
@@ -213,13 +215,16 @@ lbl_800EED10:
 	.incbin "baserom.dol", 0xEBD10, 0x40
 .global lbl_800EED50
 lbl_800EED50:
-	.incbin "baserom.dol", 0xEBD50, 0x18
+	string_align "War of the Whiskers"
+
 .global lbl_800EED68
 lbl_800EED68:
-	.incbin "baserom.dol", 0xEBD68, 0x10
+	string_align "Tom and Jerry"
+
 .global lbl_800EED78
 lbl_800EED78:
-	.incbin "baserom.dol", 0xEBD78, 0x10
+	string_align "save/tnj2.ico"
+
 .global lbl_800EED88
 lbl_800EED88:
 	.incbin "baserom.dol", 0xEBD88, 0x24
@@ -294,25 +299,32 @@ lbl_800EF0A8:
 	.incbin "baserom.dol", 0xEC0A8, 0x1BF4
 .global lbl_800F0C9C
 lbl_800F0C9C:
-	.incbin "baserom.dol", 0xEDC9C, 0x8
+	string_align4 "FONT"
+
 .global lbl_800F0CA4
 lbl_800F0CA4:
-	.incbin "baserom.dol", 0xEDCA4, 0x8
+	string_align4 "BUTT"
+
 .global lbl_800F0CAC
 lbl_800F0CAC:
-	.incbin "baserom.dol", 0xEDCAC, 0x8
+	string_align4 "BUTX"
+
 .global lbl_800F0CB4
 lbl_800F0CB4:
-	.incbin "baserom.dol", 0xEDCB4, 0x8
+	string_align4 "BUTS"
+
 .global lbl_800F0CBC
 lbl_800F0CBC:
-	.incbin "baserom.dol", 0xEDCBC, 0x8
+	string_align4 "BUTC"
+
 .global lbl_800F0CC4
 lbl_800F0CC4:
-	.incbin "baserom.dol", 0xEDCC4, 0x8
+	string_align4 "INFI"
+
 .global lbl_800F0CCC
 lbl_800F0CCC:
-	.incbin "baserom.dol", 0xEDCCC, 0x8
+	string_align4 "DPAD"
+
 .global lbl_800F0CD4
 lbl_800F0CD4:
 	.incbin "baserom.dol", 0xEDCD4, 0x4
@@ -324,7 +336,8 @@ lbl_800F0CDC:
 	.incbin "baserom.dol", 0xEDCDC, 0x4
 .global lbl_800F0CE0
 lbl_800F0CE0:
-	.incbin "baserom.dol", 0xEDCE0, 0x8
+	string_align4 "FONG"
+
 .global lbl_800F0CE8
 lbl_800F0CE8:
 	.incbin "baserom.dol", 0xEDCE8, 0x4
@@ -435,22 +448,27 @@ lbl_800F0DBC:
 	.incbin "baserom.dol", 0xEDDBC, 0x4
 .global lbl_800F0DC0
 lbl_800F0DC0:
-	.incbin "baserom.dol", 0xEDDC0, 0x30
+	string_align4 "host0:/usr/local/sce/iop/modules/sio2man.irx"
+
 .global lbl_800F0DF0
 lbl_800F0DF0:
-	.incbin "baserom.dol", 0xEDDF0, 0x2C
+	string_align4 "host0:/usr/local/sce/iop/modules/padman.irx"
+
 .global lbl_800F0E1C
 lbl_800F0E1C:
-	.incbin "baserom.dol", 0xEDE1C, 0x2C
+	string_align4 "host0:/usr/local/sce/iop/modules/mcman.irx"
+
 .global lbl_800F0E48
 lbl_800F0E48:
-	.incbin "baserom.dol", 0xEDE48, 0x2C
+	string_align4 "host0:/usr/local/sce/iop/modules/mcserv.irx"
+
 .global lbl_800F0E74
 lbl_800F0E74:
 	.incbin "baserom.dol", 0xEDE74, 0x1C
 .global lbl_800F0E90
 lbl_800F0E90:
-	.incbin "baserom.dol", 0xEDE90, 0x14
+	string_align4 "GFX\\SFX\\FONT.PS2"
+
 .global lbl_800F0EA4
 lbl_800F0EA4:
 	.incbin "baserom.dol", 0xEDEA4, 0x4
