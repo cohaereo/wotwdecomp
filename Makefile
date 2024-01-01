@@ -4,7 +4,7 @@ endif
 ifneq ($(findstring MSYS,$(shell uname)),) # MSYS
   WINDOWS := 1
 endif
-ifneq ($(findstring Microsoft,$(shell uname -r)),) # WSL2 (also WSL1?)
+ifneq ($(findstring microsoft,$(shell uname -r)),) # WSL2
   WINDOWS := 1
 endif
 
