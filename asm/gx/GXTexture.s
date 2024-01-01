@@ -641,8 +641,8 @@ GXLoadTlut:
 /* 800A7A00 000A4A00  7C 08 03 A6 */	mtlr r0
 /* 800A7A04 000A4A04  4E 80 00 20 */	blr 
 
-.global func_800A7A08
-func_800A7A08:
+.global GXInitTexCacheRegion
+GXInitTexCacheRegion:
 /* 800A7A08 000A4A08  2C 06 00 01 */	cmpwi r6, 1
 /* 800A7A0C 000A4A0C  41 82 00 28 */	beq lbl_800A7A34
 /* 800A7A10 000A4A10  40 80 00 10 */	bge lbl_800A7A20
@@ -716,8 +716,8 @@ lbl_800A7AC0:
 /* 800A7AF4 000A4AF4  98 03 00 0D */	stb r0, 0xd(r3)
 /* 800A7AF8 000A4AF8  4E 80 00 20 */	blr 
 
-.global func_800A7AFC
-func_800A7AFC:
+.global GXInitTlutRegion
+GXInitTlutRegion:
 /* 800A7AFC 000A4AFC  38 00 00 00 */	li r0, 0
 /* 800A7B00 000A4B00  90 03 00 00 */	stw r0, 0(r3)
 /* 800A7B04 000A4B04  3C 04 FF F8 */	addis r0, r4, 0xfff8

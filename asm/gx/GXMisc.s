@@ -223,8 +223,8 @@ lbl_800A5884:
 /* 800A58D0 000A28D0  7C 08 03 A6 */	mtlr r0
 /* 800A58D4 000A28D4  4E 80 00 20 */	blr 
 
-.global func_800A58D8
-func_800A58D8:
+.global GXReadDrawSync
+GXReadDrawSync:
 /* 800A58D8 000A28D8  80 6D 89 80 */	lwz r3, __peReg-_SDA_BASE_(r13)
 /* 800A58DC 000A28DC  A0 63 00 0E */	lhz r3, 0xe(r3)
 /* 800A58E0 000A28E0  4E 80 00 20 */	blr 
@@ -376,8 +376,8 @@ GXPokeZMode:
 /* 800A5AA4 000A2AA4  B0 C3 00 00 */	sth r6, 0(r3)
 /* 800A5AA8 000A2AA8  4E 80 00 20 */	blr 
 
-.global func_800A5AAC
-func_800A5AAC:
+.global GXPeekARGB
+GXPeekARGB:
 /* 800A5AAC 000A2AAC  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 800A5AB0 000A2AB0  3C 60 C8 00 */	lis r3, 0xc800
 /* 800A5AB4 000A2AB4  50 03 15 3A */	rlwimi r3, r0, 2, 0x14, 0x1d

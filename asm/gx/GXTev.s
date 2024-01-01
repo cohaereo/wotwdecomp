@@ -82,8 +82,8 @@ GXSetTevAlphaIn:
 /* 800A8494 000A5494  B0 09 00 02 */	sth r0, 2(r9)
 /* 800A8498 000A5498  4E 80 00 20 */	blr 
 
-.global func_800A849C
-func_800A849C:
+.global GXSetTevColorOp
+GXSetTevColorOp:
 /* 800A849C 000A549C  80 0D 97 08 */	lwz r0, __GXData-_SDA_BASE_(r13)
 /* 800A84A0 000A54A0  54 69 10 3A */	slwi r9, r3, 2
 /* 800A84A4 000A54A4  2C 04 00 01 */	cmpwi r4, 1
@@ -113,8 +113,8 @@ lbl_800A84D4:
 /* 800A84FC 000A54FC  B0 04 00 02 */	sth r0, 2(r4)
 /* 800A8500 000A5500  4E 80 00 20 */	blr 
 
-.global func_800A8504
-func_800A8504:
+.global GXSetTevAlphaOp
+GXSetTevAlphaOp:
 /* 800A8504 000A5504  80 0D 97 08 */	lwz r0, __GXData-_SDA_BASE_(r13)
 /* 800A8508 000A5508  54 69 10 3A */	slwi r9, r3, 2
 /* 800A850C 000A550C  2C 04 00 01 */	cmpwi r4, 1
@@ -144,8 +144,8 @@ lbl_800A853C:
 /* 800A8564 000A5564  B0 04 00 02 */	sth r0, 2(r4)
 /* 800A8568 000A5568  4E 80 00 20 */	blr 
 
-.global func_800A856C
-func_800A856C:
+.global GXSetTevColor
+GXSetTevColor:
 /* 800A856C 000A556C  88 A4 00 00 */	lbz r5, 0(r4)
 /* 800A8570 000A5570  54 67 08 3C */	slwi r7, r3, 1
 /* 800A8574 000A5574  88 04 00 03 */	lbz r0, 3(r4)
@@ -178,8 +178,8 @@ func_800A856C:
 /* 800A85E0 000A55E0  B0 03 00 02 */	sth r0, 2(r3)
 /* 800A85E4 000A55E4  4E 80 00 20 */	blr 
 
-.global func_800A85E8
-func_800A85E8:
+.global GXSetTevKColor
+GXSetTevKColor:
 /* 800A85E8 000A55E8  88 A4 00 00 */	lbz r5, 0(r4)
 /* 800A85EC 000A55EC  54 66 08 3C */	slwi r6, r3, 1
 /* 800A85F0 000A55F0  88 04 00 03 */	lbz r0, 3(r4)
