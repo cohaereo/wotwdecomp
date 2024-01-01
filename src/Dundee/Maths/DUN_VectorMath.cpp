@@ -21,9 +21,15 @@ void MATHS_VectorNormalise(Vec3F *v) {
 	}
 }
 
+extern float lbl_800EEB7C;
 #if 0
-dontmangle void func_80003858() {
-
+dontmangle void func_80003858(Vec3F *v) {
+	float v1 = MATHS_VectorMagnitude(v);
+	if (v1 != lbl_800EEB7C) {
+		v->x /= v1;
+		v->y /= v1;
+		v->z /= v1;
+	}
 }
 #else
 dontmangle __ASM void func_80003858() {

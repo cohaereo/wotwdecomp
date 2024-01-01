@@ -20,30 +20,16 @@ void CEventManager::ResetAll() {
     this->ResetEventHandlers();
 }
 
-// TODO: Needs a cleaner match
 void CEventManager::ResetEventHandlers() {
-    u8 uVar1;
-    u32 uVar2;
-
-    uVar2 = 0;
-    do {
-        uVar1 = uVar2 + 1;
-        this->mHandlerSlots[uVar2] = 0;
-        uVar2 = uVar1;
-    } while (uVar1 != 20);
+    for(u8 i = 0; i != 20; i += 1) {
+        this->mHandlerSlots[i] = 0;
+    }
 }
 
-// TODO: Needs a cleaner match
 void CEventManager::ClearDelayedQueue() {
-    u8 uVar1;
-    u32 uVar2;
-
-    uVar2 = 0;
-    do {
-        uVar1 = uVar2 + 1;
-        this->_f4[uVar2] = 1;
-        uVar2 = uVar1;
-    } while (uVar1 != 10);
+    for(u8 i = 0; i != 10; i += 1) {
+        this->_f4[i] = 1;
+    }
 }
 
 dontmangle __ASM void AttachEventHandler__13CEventManagerUiPFUiUiUi_v() {
@@ -86,7 +72,7 @@ dontmangle __ASM void AttachEventHandler__13CEventManagerUiPFUiUiUi_v() {
 
 #if 0
 void CEventManager::PostEvent(u32 param_1, u32 param_2, u32 param_3) {
-    for(int i = 0; i != 20; i += 1) {
+    for(u8 i = 0; i != 20; i += 1) {
         if ((this->mHandlerSlots[i] != 0) && ((this->mHandlers[i].type & param_1 >> 8) == param_1 >> 8)) {
             this->mHandlers[i].handler(param_1, param_2, param_3);
         }
