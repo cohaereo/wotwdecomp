@@ -4,7 +4,7 @@ endif
 ifneq ($(findstring MSYS,$(shell uname)),) # MSYS
   WINDOWS := 1
 endif
-ifneq ($(findstring microsoft,$(shell uname -r)),) # WSL2
+ifneq ($(findstring Microsoft,$(shell uname -r)),) # WSL2
   WINDOWS := 1
 endif
 
@@ -44,8 +44,8 @@ else
 endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
 OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
-CC      := $(WINE) ngccc
-LD      := $(WINE) mwcc_compiler/mwldeppc.exe
+CC      := $(WINE) ngccc.exe
+LD      := $(WINE) compiler/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
 
@@ -68,6 +68,7 @@ DUMMY != mkdir -p $(ALL_DIRS)
 
 $(DOL): $(ELF) | tools
 	$(ELF2DOL) $< $@
+	./headerfix.sh
 	$(SHA1SUM) -c wotw.sha1
 
 clean:

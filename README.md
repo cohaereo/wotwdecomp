@@ -25,8 +25,9 @@ main.dol: `sha1: a88f43e9a1ca1e2c09ad48f106d9341825ac54ab`
 ### Instructions
 
 1. Obtain a clean DOL of WotW and place it in the base working directory and name it `baserom.dol`.
-2. Obtain a copy of the MWCC (Build 158) PowerPC and place it in the mwcc_compiler/ folder. (NOTE: This compiler's executables [mwcceppc.exe mwasmeppc.exe and mwldeppc.exe] can be installed with Codewarrior 1.1 for Gamecube, but no license or crack is provided with this project. Please obtain access to the compiler on your own.) If you are in the Gamecube/Wii Decompilation discord (not public at this time, but if you are interested and have the skillset to contribute, please DM Revo#7090 on Discord for access), download GC_COMPILERS.zip and extract it to tools/mwcc_compiler/.
-3. Run the `make` command
+2. Obtain a copy of the Metrowerks compiler for gamecube (version unknown) and place it in `compiler`
+3. Install the ProDG compiler for gamecube (v1.2.2.33)
+4. Run the `make` command
 
 ## Contributions
 
