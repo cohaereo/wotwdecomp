@@ -126,15 +126,12 @@ lbl_800FCCB0:
 .global lbl_8010CFF0
 lbl_8010CFF0:
 	.incbin "baserom.dol", 0x109FF0, 0x148
-.global g_language
-g_language:
+.global g_Language
+g_Language:
 	.incbin "baserom.dol", 0x10A138, 0x1
-.global lbl_8010D139
-lbl_8010D139:
-	.incbin "baserom.dol", 0x10A139, 0x23DC
-.global lbl_8010F515
-lbl_8010F515:
-	.incbin "baserom.dol", 0x10C515, 0x641BB
+.global g_LanguageStringTable
+g_LanguageStringTable:
+	.incbin "baserom.dol", 0x10A139, 0x66597
 .global lbl_801736D0
 lbl_801736D0:
 	.incbin "baserom.dol", 0x1706D0, 0x4
