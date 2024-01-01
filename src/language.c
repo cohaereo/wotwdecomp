@@ -83,15 +83,19 @@ void asm LANG_SetLanguage(u8 a1) {
 #endif
 
 #ifdef NON_MATCHING
+#pragma push
+#pragma peephole off
+#pragma optimization_level 1
 bool LANG_IsLanguageValid() {
     return g_Language < LANG_COUNT; // Works with GCC, not with MWCC
 }
+#pragma pop
 #else
 bool asm LANG_IsLanguageValid() {
     nofralloc
     lis r9, g_Language@ha
     lbz r3, g_Language@l(r9)
-    subfic r3, r3, 5
+    subfic r3, r3, LANG_LANGUAGE_COUNT-1
     li r3, 0
     adde r3, r3, r3
     blr 
