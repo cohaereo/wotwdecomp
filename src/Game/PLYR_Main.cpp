@@ -1,4 +1,5 @@
 #include "types.h"
+#include "PLYR_Main.h"
 
 #if 0
 void CPlayer::Initialise(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) {
@@ -1703,11 +1704,11 @@ dontmangle __ASM void PLYR_EventHandler__FUiUiUi() {
 		"bne lbl_80040440\t\n"
 		"lbl_80040434:\t\n"
 		"mr 3, 28\t\n"
-		"bl GetPlayerName_7CPlayer\t\n"
+		"bl GetPlayerName__7CPlayer\t\n"
 		"b lbl_80040448\t\n"
 		"lbl_80040440:\t\n"
 		"mr 3, 28\t\n"
-		"bl GetTeamName_7CPlayer\t\n"
+		"bl GetTeamName__7CPlayer\t\n"
 		"lbl_80040448:\t\n"
 		"mr 30, 3\t\n"
 		"li 3, 0x47\t\n"
@@ -2548,11 +2549,11 @@ dontmangle __ASM void Process__7CPlayer() {
 		"bne lbl_80041028\t\n"
 		"lbl_8004101C:\t\n"
 		"mr 3, 25\t\n"
-		"bl GetPlayerName_7CPlayer\t\n"
+		"bl GetPlayerName__7CPlayer\t\n"
 		"b lbl_80041030\t\n"
 		"lbl_80041028:\t\n"
 		"mr 3, 25\t\n"
-		"bl GetTeamName_7CPlayer\t\n"
+		"bl GetTeamName__7CPlayer\t\n"
 		"lbl_80041030:\t\n"
 		"mr 29, 3\t\n"
 		"lis 9, g_pGameGlob@ha\t\n"
@@ -5522,31 +5523,26 @@ dontmangle __ASM void TornadoRelease__7CPlayerP5Vec3Ff() {
 }
 #endif
 
-#if 0
-void CPlayer::ZeroAllVelocities(void) {
 
+extern f32 lbl_800F4748;
+void CPlayer::ZeroAllVelocities() {
+	f32 zero = lbl_800F4748;
+	*(f32*)((u32)this + 0xb318) = zero;
+	*(f32*)((u32)this + 0xb31c) = zero;
+	*(f32*)((u32)this + 0xb320) = zero;
+
+	*(f32*)((u32)this + 0xb30c) = zero;
+	*(f32*)((u32)this + 0xb310) = zero;
+	*(f32*)((u32)this + 0xb314) = zero;
+
+	*(f32*)((u32)this + 0xb2dc) = zero;
+	*(f32*)((u32)this + 0xb2e0) = zero;
+	*(f32*)((u32)this + 0xb2e4) = zero;
+
+	*(f32*)((u32)this + 0xb324) = zero;
+	*(f32*)((u32)this + 0xb328) = zero;
+	*(f32*)((u32)this + 0xb32c) = zero;
 }
-#else
-dontmangle __ASM void ZeroAllVelocities__7CPlayer() {
-	asm volatile(
-		"lis 9, lbl_800F4748@ha\t\n"
-		"addis 3, 3, 1\t\n"
-		"lfs 0, lbl_800F4748@l(9)\t\n"
-		"stfs 0, -0x4cd4(3)\t\n"
-		"stfs 0, -0x4ce8(3)\t\n"
-		"stfs 0, -0x4ce4(3)\t\n"
-		"stfs 0, -0x4ce0(3)\t\n"
-		"stfs 0, -0x4cf4(3)\t\n"
-		"stfs 0, -0x4cf0(3)\t\n"
-		"stfs 0, -0x4cec(3)\t\n"
-		"stfs 0, -0x4d24(3)\t\n"
-		"stfs 0, -0x4d20(3)\t\n"
-		"stfs 0, -0x4d1c(3)\t\n"
-		"stfs 0, -0x4cdc(3)\t\n"
-		"stfs 0, -0x4cd8(3)\t\n"
-	);
-}
-#endif
 
 #if 0
 void CPlayer::AttackedByBees(Vec3F *) {
@@ -5999,11 +5995,10 @@ dontmangle __ASM void StopConcreteBoots__7CPlayer() {
 }
 #endif
 
-// void CPlayer::ApplyForceToPlayer(Vec3F* force) {
-dontmangle void ApplyForceToPlayer__7CPlayerP5Vec3F(void* _this, Vec3F* force) {
-	*(f32*)((u32)_this + 0xb2dc) = force->x;
-	*(f32*)((u32)_this + 0xb2e0) = force->y;
-	*(f32*)((u32)_this + 0xb2e4) = force->z;
+void CPlayer::ApplyForceToPlayer(Vec3F* force) {
+	*(f32*)((u32)this + 0xb2dc) = force->x;
+	*(f32*)((u32)this + 0xb2e0) = force->y;
+	*(f32*)((u32)this + 0xb2e4) = force->z;
 }
 
 #if 0
@@ -6613,8 +6608,8 @@ dontmangle __ASM void func_80044610() {
 
 extern char* TXT_GetString(u16 stringIndex);
 
-dontmangle char* GetPlayerName_7CPlayer(void* _this) {
-	u8 player = *(u8 *)((u32)_this + 0xb385);
+char* CPlayer::GetPlayerName() {
+	u8 player = *(u8 *)((u32)this + 0xb385);
 	u16 stringIndex;
 	if(player == 0)
 		stringIndex = 0x12;
@@ -6630,8 +6625,8 @@ dontmangle char* GetPlayerName_7CPlayer(void* _this) {
 	return TXT_GetString(stringIndex);
 }
 
-dontmangle char* GetTeamName_7CPlayer(void* _this) {  
-	u8 team = *(u8 *)((u32)_this + 0xb386);
+char* CPlayer::GetTeamName() {
+	u8 team = *(u8 *)((u32)this + 0xb386);
 	u16 stringIndex;
 	if(team == 0)
 		stringIndex = 0xca;
