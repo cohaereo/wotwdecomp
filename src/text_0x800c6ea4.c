@@ -362,7 +362,7 @@ void func_800C71D8() {
     return;
 }
 
-u32 func_800C71DC() {
+u32 sceSifLoadModule() {
     return 0;
 }
 
@@ -374,7 +374,7 @@ u32 func_800C71E8() {
     return 0;
 }
 
-void asm func_800C71F0() {
+void asm sceGsSyncV() {
 nofralloc
 /* 800C71F0 000C41F0  94 21 FF F8 */	stwu r1, -8(r1)
 /* 800C71F4 000C41F4  7C 08 02 A6 */	mflr r0

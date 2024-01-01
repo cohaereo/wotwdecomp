@@ -1,19 +1,19 @@
 #include "types.h"
 
 void __main();
-void func_8000CDF4();
-void func_8000D8D4();
-void func_8000D2B4();
+void APP_Initialise__Fv();
+void APP_Process__Fv();
+void APP_Render__Fv();
 
 #ifdef NON_MATCHING
 // #if 1
 int main_() {
     __main();
-    func_8000CDF4();
+    APP_Initialise__Fv();
     
     while(1) {
-        func_8000D8D4();
-        func_8000D2B4();
+        APP_Process__Fv();
+        APP_Render__Fv();
     }
 
     return 0;
@@ -31,10 +31,10 @@ __ASM void main_() {
     "bl __main\t\n"
     "li 0, 0\t\n"
     "cmpwi 4, 0, 0\t\n"
-    "bl func_8000CDF4\t\n"
+    "bl APP_Initialise__Fv\t\n"
 "lbl_8000F134:\t\n"
-    "bl func_8000D8D4\t\n"
-    "bl func_8000D2B4\t\n"
+    "bl APP_Process__Fv\t\n"
+    "bl APP_Render__Fv\t\n"
     "beq 4, lbl_8000F134\t\n"
     "li 3, 0\t\n"
     "lwz 0, 0x14(1)\t\n"

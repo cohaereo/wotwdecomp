@@ -250,8 +250,8 @@ func_800C71AC:
 func_800C71D8:
 /* 800C71D8 000C41D8  4E 80 00 20 */	blr 
 
-.global func_800C71DC
-func_800C71DC:
+.global sceSifLoadModule
+sceSifLoadModule:
 /* 800C71DC 000C41DC  38 60 00 00 */	li r3, 0
 /* 800C71E0 000C41E0  4E 80 00 20 */	blr 
 
@@ -264,8 +264,8 @@ func_800C71E8:
 /* 800C71E8 000C41E8  38 60 00 00 */	li r3, 0
 /* 800C71EC 000C41EC  4E 80 00 20 */	blr 
 
-.global func_800C71F0
-func_800C71F0:
+.global sceGsSyncV
+sceGsSyncV:
 /* 800C71F0 000C41F0  94 21 FF F8 */	stwu r1, -8(r1)
 /* 800C71F4 000C41F4  7C 08 02 A6 */	mflr r0
 /* 800C71F8 000C41F8  90 01 00 0C */	stw r0, 0xc(r1)
