@@ -15,7 +15,7 @@ endif
 OBJ_DIR := build
 
 SRC_DIRS := src
-ASM_DIRS := asm asm/dvd
+ASM_DIRS := asm asm/dvd asm/gx
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
@@ -51,7 +51,7 @@ SHA1SUM := sha1sum
 
 # Options
 ASFLAGS := -mgekko -I include
-LDFLAGS := -map $(MAP)
+LDFLAGS := -map $(MAP) -fp hard -nodefaults
 CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -O3,s -nodefaults -i include -sdatathreshold 0
 
 #-------------------------------------------------------------------------------

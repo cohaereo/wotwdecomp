@@ -28,9 +28,9 @@ void VIWaitForRetrace();
 void func_800897C8(u32, u32);
 void func_800898C4(u32, u32);
 void func_800D1C48();
-void func_800D1C8C();
-void func_800D3F30();
-void func_800D3F74();
+void func_800D1C8C(u32*, u32);
+void func_800D3F30(u32*);
+void func_800D3F74(u32*, u32);
 
 #ifdef NON_MATCHING
 // Doesn't work in it's current state
@@ -175,8 +175,6 @@ nofralloc
 }
 #endif
 
-#undef NON_MATCHING
-
 void asm func_800C6FF0() {
 nofralloc
 /* 800C6FF0 000C3FF0  94 21 FF F8 */	stwu r1, -8(r1)
@@ -265,6 +263,24 @@ nofralloc
 /* 800C710C 000C410C  4E 80 00 20 */	blr 
 }
 
+#ifdef NON_MATCHING_WORKING
+void func_800C7110(u32 a1, u32 a2) {
+    if(a2 == 0xffff) {
+        if(a1 == 0) {
+            func_800D1C8C(&lbl_8020930D, 2);
+            func_800D3F74(&lbl_8020930C, 2);
+        }
+        else {
+            func_800D3F30(&lbl_8020930C);
+            func_800D1C48(&lbl_8020930D);
+        }
+    }
+
+    // That feeling when the function works but it's too small
+    __asm("nop");
+    __asm("nop");
+}
+#else
 void asm func_800C7110(u32 a1, u16 a2) {
 nofralloc
 /* 800C7110 000C4110  94 21 FF F8 */	stwu r1, -8(r1)
@@ -298,6 +314,7 @@ lbl_800C7170:
 /* 800C7178 000C4178  38 21 00 08 */	addi r1, r1, 8
 /* 800C717C 000C417C  4E 80 00 20 */	blr 
 }
+#endif
 
 #ifdef NON_MATCHING
 void func_800C7180() {
@@ -400,6 +417,8 @@ lbl_800C7268:
 }
 
 void func_800C7270() {}
+
+// #define NON_MATCHING
 
 #ifdef NON_MATCHING
 void func_800C7274(u32 a1) {
