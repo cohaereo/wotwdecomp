@@ -24,6 +24,22 @@ TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/src/Main/APP_Text.o                  \
                                                     \
     $(OBJ_DIR)/asm/text_0x8001009c.o                \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Banquet.o       \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Beach.o         \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Boxing.o        \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Cabin.o         \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Haunted.o       \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Hell.o          \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Kitchen.o       \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Lab.o           \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_EventClass.o    \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Market.o        \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Scrap.o         \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Ship.o          \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_Skyscraper.o    \
+    $(OBJ_DIR)/asm/SpecialEvents/SE_WildWest.o      \
+                                                    \
+    $(OBJ_DIR)/asm/text_0x80079644.o                \
                                                     \
     $(OBJ_DIR)/asm/dvd/dvdfs.o                      \
     $(OBJ_DIR)/asm/dvd/dvd.o                        \
@@ -31,8 +47,6 @@ TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/dvd/dvderror.o                   \
     $(OBJ_DIR)/asm/dvd/fstload.o                    \
     $(OBJ_DIR)/asm/dvd/dvdlow.o                     \
-                                                    \
-    $(OBJ_DIR)/asm/text_0x80095d58.o                \
                                                     \
     $(OBJ_DIR)/asm/vi/vi.o                          \
                                                     \

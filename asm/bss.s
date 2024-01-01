@@ -111,8 +111,8 @@ lbl_801A5B3C:
 .global lbl_801A5B40
 lbl_801A5B40:
 	.skip 0x4
-.global lbl_801A5B44
-lbl_801A5B44:
+.global g_pGameGlob
+g_pGameGlob:
 	.skip 0x4
 .global lbl_801A5B48
 lbl_801A5B48:

@@ -1602,48 +1602,354 @@ lbl_801913C8:
 .global lbl_80191430
 lbl_80191430:
 	.incbin "baserom.dol", 0x18E430, 0x68
+
+/* _vt$10CBanquetSE */
 .global lbl_80191498
 lbl_80191498:
-	.incbin "baserom.dol", 0x18E498, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e48b8
+	.long 0x00000000
+	.long LoadAndInitialiseData__10CBanquetSE
+	.long 0x00000000
+	.long 0x80065cc4
+	.long 0x00000000
+	.long 0x8006798c
+	.long 0x00000000
+	.long 0x800664bc
+	.long 0x00000000
+	.long 0x80065e84
+	.long 0x00000000
+	.long 0x80067990
+	.long 0x00000000
+	.long 0x800674ac
+	.long 0x00000000
+	.long 0x80065dec
+	.long 0x00000000
+	.long 0x8006796c
+	.long 0x00000000
+	.long 0x00000000
+
+/* _vt$unk */
 .global lbl_801914F8
 lbl_801914F8:
 	.incbin "baserom.dol", 0x18E4F8, 0x60
+
+/* _vt$8CBeachSE */
 .global lbl_80191558
 lbl_80191558:
-	.incbin "baserom.dol", 0x18E558, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e4944
+	.long 0x00000000
+	.long LoadAndInitialiseData__8CBeachSE
+	.long 0x00000000
+	.long 0x80067bd4
+	.long 0x00000000
+	.long 0x80069778
+	.long 0x00000000
+	.long 0x80068fa8
+	.long 0x00000000
+	.long 0x80067e98
+	.long 0x00000000
+	.long 0x80068050
+	.long 0x00000000
+	.long 0x80069318
+	.long 0x00000000
+	.long 0x80067e00
+	.long 0x00000000
+	.long 0x800696ec
+	.long 0x00000000
+	.long 0x00000000
+
+/* _vt$9CBoxingSE */
 .global lbl_801915B8
 lbl_801915B8:
-	.incbin "baserom.dol", 0x18E5B8, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e4978
+	.long 0x00000000
+	.long LoadAndInitialiseData__9CBoxingSE
+	.long 0x00000000
+	.long 0x800697a8
+	.long 0x00000000
+	.long 0x80069c10
+	.long 0x00000000
+	.long 0x80069b44
+	.long 0x00000000
+	.long 0x800697f4
+	.long 0x00000000
+	.long 0x80069c14
+	.long 0x00000000
+	.long 0x80069c1c
+	.long 0x00000000
+	.long 0x80069c20
+	.long 0x00000000
+	.long 0x80069c24
+	.long 0x00000000
+	.long 0x00000000
+
+/* _vt$8CCabinSE */
 .global lbl_80191618
 lbl_80191618:
-	.incbin "baserom.dol", 0x18E618, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e49ac
+	.long 0x00000000
+	.long LoadAndInitialiseData__8CCabinSE
+	.long 0x00000000
+	.long 0x8006a2f0
+	.long 0x00000000
+	.long 0x8006a878
+	.long 0x00000000
+	.long 0x8006b1e8
+	.long 0x00000000
+	.long 0x8006ac60
+	.long 0x00000000
+	.long 0x8006c2d4
+	.long 0x00000000
+	.long 0x8006bb94
+	.long 0x00000000
+	.long 0x8006a14c
+	.long 0x00000000
+	.long 0x8006c2b0
+	.long 0x00000000
+	.long 0x00000000
+
+/* _vt$10CHauntedSE */
 .global lbl_80191678
 lbl_80191678:
-	.incbin "baserom.dol", 0x18E678, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e49fc
+	.long 0x00000000
+	.long LoadAndInitialiseData__10CHauntedSE
+	.long 0x00000000
+	.long 0x8006ce24
+	.long 0x00000000
+	.long 0x8006cf38
+	.long 0x00000000
+	.long 0x8006d150
+	.long 0x00000000
+	.long 0x8006d03c
+	.long 0x00000000
+	.long 0x8006d044
+	.long 0x00000000
+	.long 0x8006d9f8
+	.long 0x00000000
+	.long 0x8006cf6c
+	.long 0x00000000
+	.long 0x8006dc10
+	.long 0x00000000
+	.long 0x00000000
+
+/* _vt$7CHellSE */
 .global lbl_801916D8
 lbl_801916D8:
-	.incbin "baserom.dol", 0x18E6D8, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e4a4c
+	.long 0x00000000
+	.long LoadAndInitialiseData__7CHellSE
+	.long 0x00000000
+	.long 0x8006dc7c
+	.long 0x00000000
+	.long 0x8006e1a0
+	.long 0x00000000
+	.long 0x8006ddf0
+	.long 0x00000000
+	.long 0x8006e1a4
+	.long 0x00000000
+	.long 0x8006e1ac
+	.long 0x00000000
+	.long 0x8006e170
+	.long 0x00000000
+	.long 0x8006dcf8
+	.long 0x00000000
+	.long 0x8006e1b4
+	.long 0x00000000
+	.long 0x00000000
+
+/* _vt$10CKitchenSE */
 .global lbl_80191738
 lbl_80191738:
-	.incbin "baserom.dol", 0x18E738, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e4a80
+	.long 0x00000000
+	.long LoadAndInitialiseData__10CKitchenSE
+	.long 0x00000000
+	.long 0x8006e554
+	.long 0x00000000
+	.long 0x8006e61c
+	.long 0x00000000
+	.long 0x8006ed28
+	.long 0x00000000
+	.long 0x8006e96c
+	.long 0x00000000
+	.long 0x8006fa88
+	.long 0x00000000
+	.long 0x8006f68c
+	.long 0x00000000
+	.long 0x8006e858
+	.long 0x00000000
+	.long 0x8006fa64
+	.long 0x00000000
+	.long 0x00000000
+
+/* _vt$unk */
 .global lbl_80191798
 lbl_80191798:
 	.incbin "baserom.dol", 0x18E798, 0x60
+
+/* _vt$9CMarketSE */
 .global lbl_801917F8
 lbl_801917F8:
-	.incbin "baserom.dol", 0x18E7F8, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e4b04
+	.long 0x00000000
+	.long LoadAndInitialiseData__9CMarketSE
+	.long 0x00000000
+	.long 0x8007051c
+	.long 0x00000000
+	.long 0x80070670
+	.long 0x00000000
+	.long 0x80070ff0
+	.long 0x00000000
+	.long 0x8007282c
+	.long 0x00000000
+	.long 0x80072834
+	.long 0x00000000
+	.long 0x80072448
+	.long 0x00000000
+	.long 0x80070ab0
+	.long 0x00000000
+	.long 0x800724c8
+	.long 0x00000000
+	.long 0x00000000
+
+/* _vt$8CScrapSE */
 .global lbl_80191858
 lbl_80191858:
-	.incbin "baserom.dol", 0x18E858, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e4b5c
+	.long 0x00000000
+	.long LoadAndInitialiseData__8CScrapSE
+	.long 0x00000000
+	.long 0x80072b10
+	.long 0x00000000
+	.long 0x80072cb0
+	.long 0x00000000
+	.long 0x8007317c
+	.long 0x00000000
+	.long 0x80072d68
+	.long 0x00000000
+	.long 0x80073fe4
+	.long 0x00000000
+	.long 0x80073f58
+	.long 0x00000000
+	.long 0x80072ce4
+	.long 0x00000000
+	.long 0x80073fdc
+	.long 0x00000000
+	.long 0x00000000
+
+
+/* _vt$7CShipSE */
 .global lbl_801918B8
 lbl_801918B8:
-	.incbin "baserom.dol", 0x18E8B8, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e4bac
+	.long 0x00000000
+	.long LoadAndInitialiseData__7CShipSE
+	.long 0x00000000
+	.long 0x800745a0
+	.long 0x00000000
+	.long 0x80075ca8
+	.long 0x00000000
+	.long 0x80075144
+	.long 0x00000000
+	.long 0x80074920
+	.long 0x00000000
+	.long 0x80075cac
+	.long 0x00000000
+	.long 0x80075abc
+	.long 0x00000000
+	.long 0x800747f4
+	.long 0x00000000
+	.long 0x80075c80
+	.long 0x00000000
+	.long 0x00000000
+
+/* _vt$13CSkyscraperSE */
 .global lbl_80191918
 lbl_80191918:
-	.incbin "baserom.dol", 0x18E918, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e4be0
+	.long 0x00000000
+	.long LoadAndInitialiseData__13CSkyscraperSE
+	.long 0x00000000
+	.long 0x80075e70
+	.long 0x00000000
+	.long 0x80076028
+	.long 0x00000000
+	.long 0x80076dcc
+	.long 0x00000000
+	.long 0x80076190
+	.long 0x00000000
+	.long 0x800775ac
+	.long 0x00000000
+	.long 0x800774c8
+	.long 0x00000000
+	.long 0x8007605c
+	.long 0x00000000
+	.long 0x80077588
+	.long 0x00000000
+	.long 0x00000000
+
+/* _vt$11CWildWestSE */
 .global lbl_80191978
 lbl_80191978:
-	.incbin "baserom.dol", 0x18E978, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e4c30
+	.long 0x00000000
+	.long LoadAndInitialiseData__11CWildWestSE
+	.long 0x00000000
+	.long func_8007776C
+	.long 0x00000000
+	.long func_800779E0
+	.long 0x00000000
+	.long func_80077ED4
+	.long 0x00000000
+	.long func_80079634
+	.long 0x00000000
+	.long func_8007963C
+	.long 0x00000000
+	.long func_80078F90
+	.long 0x00000000
+	.long func_80077D08
+	.long 0x00000000
+	.long func_800795E8
+	.long 0x00000000
+	.long 0x00000000
+
 .global lbl_801919D8
 lbl_801919D8:
 	.incbin "baserom.dol", 0x18E9D8, 0x20

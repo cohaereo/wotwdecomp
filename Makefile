@@ -15,7 +15,7 @@ endif
 OBJ_DIR := build
 
 SRC_DIRS := src src/Main src/Dundee/Misc src/Dundee/Maths src/Dundee/Collision
-ASM_DIRS := asm asm/dvd asm/gx asm/ai asm/ar asm/vi
+ASM_DIRS := asm asm/dvd asm/gx asm/ai asm/ar asm/vi asm/SpecialEvents
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
