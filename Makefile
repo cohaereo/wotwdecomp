@@ -15,7 +15,7 @@ endif
 OBJ_DIR := build
 
 SRC_DIRS := src
-ASM_DIRS := asm
+ASM_DIRS := asm asm/dvd
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
@@ -44,15 +44,15 @@ else
 endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
 OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
-CC      := $(WINE) mwcc_compiler/mwcceppc.exe -nodefaults
-LD      := $(WINE) mwcc_compiler/mwldeppc.exe -nodefaults
+CC      := $(WINE) mwcc_compiler/mwcceppc.exe
+LD      := $(WINE) mwcc_compiler/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
 
 # Options
 ASFLAGS := -mgekko -I include
 LDFLAGS := -map $(MAP)
-CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -O4,p -i include
+CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -O3,s -nodefaults -i include -sdatathreshold 0
 
 #-------------------------------------------------------------------------------
 # Recipes

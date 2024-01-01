@@ -372,29 +372,29 @@ lbl_801EE340:
 .global lbl_801EE380
 lbl_801EE380:
 	.skip 0x1060
-.global lbl_801EF3E0
-lbl_801EF3E0:
+.global tmpBuffer
+tmpBuffer:
 	.skip 0x20
 .global lbl_801EF400
 lbl_801EF400:
 	.skip 0x20
-.global lbl_801EF420
-lbl_801EF420:
+.global DummyCommandBlock
+DummyCommandBlock:
 	.skip 0x30
 .global lbl_801EF450
 lbl_801EF450:
 	.skip 0x28
-.global lbl_801EF478
-lbl_801EF478:
+.global WaitingQueue
+WaitingQueue:
 	.skip 0x20
-.global lbl_801EF498
-lbl_801EF498:
+.global bb2Buf
+bb2Buf:
 	.skip 0x40
 .global lbl_801EF4D8
 lbl_801EF4D8:
 	.skip 0x30
-.global lbl_801EF508
-lbl_801EF508:
+.global CommandList
+CommandList:
 	.skip 0x68
 .global lbl_801EF570
 lbl_801EF570:
@@ -402,17 +402,17 @@ lbl_801EF570:
 .global lbl_801EF598
 lbl_801EF598:
 	.skip 0x40
-.global lbl_801EF5D8
-lbl_801EF5D8:
+.global regs
+regs:
 	.skip 0xF0
-.global lbl_801EF6C8
-lbl_801EF6C8:
+.global HorVer
+HorVer:
 	.skip 0x58
 .global lbl_801EF720
 lbl_801EF720:
 	.skip 0x10
-.global lbl_801EF730
-lbl_801EF730:
+.global Origin
+Origin:
 	.skip 0x70
 .global lbl_801EF7A0
 lbl_801EF7A0:
@@ -423,14 +423,14 @@ lbl_801EF7D0:
 .global lbl_801EF8C0
 lbl_801EF8C0:
 	.skip 0x90
-.global lbl_801EF950
-lbl_801EF950:
+.global __CARDBlock
+__CARDBlock:
 	.skip 0x220
 .global lbl_801EFB70
 lbl_801EFB70:
 	.skip 0x20
-.global lbl_801EFB90
-lbl_801EFB90:
+.global FifoObj
+FifoObj:
 	.skip 0x630
 .global lbl_801F01C0
 lbl_801F01C0:
@@ -1092,14 +1092,14 @@ lbl_80259A84:
 .global lbl_80259A88
 lbl_80259A88:
 	.skip 0x8
-.global lbl_80259A90
-lbl_80259A90:
+.global SamplingRate
+SamplingRate:
 	.skip 0x8
-.global lbl_80259A98
-lbl_80259A98:
+.global __DBInterface
+__DBInterface:
 	.skip 0x4
-.global lbl_80259A9C
-lbl_80259A9C:
+.global DBVerbose
+DBVerbose:
 	.skip 0x4
 .global lbl_80259AA0
 lbl_80259AA0:
@@ -1308,29 +1308,29 @@ lbl_80259BD4:
 .global lbl_80259BD8
 lbl_80259BD8:
 	.skip 0x4
-.global lbl_80259BDC
-lbl_80259BDC:
+.global EnabledBits
+EnabledBits:
 	.skip 0x4
-.global lbl_80259BE0
-lbl_80259BE0:
+.global ResettingBits
+ResettingBits:
 	.skip 0x4
-.global lbl_80259BE4
-lbl_80259BE4:
+.global RecalibrateBits
+RecalibrateBits:
 	.skip 0x4
-.global lbl_80259BE8
-lbl_80259BE8:
+.global WaitingBits
+WaitingBits:
 	.skip 0x4
-.global lbl_80259BEC
-lbl_80259BEC:
+.global CheckingBits
+CheckingBits:
 	.skip 0x4
-.global lbl_80259BF0
-lbl_80259BF0:
+.global PendingBits
+PendingBits:
 	.skip 0x4
-.global lbl_80259BF4
-lbl_80259BF4:
+.global BarrelBits
+BarrelBits:
 	.skip 0x8
-.global lbl_80259BFC
-lbl_80259BFC:
+.global SamplingCallback
+SamplingCallback:
 	.skip 0x4
 .global lbl_80259C00
 lbl_80259C00:
@@ -1485,26 +1485,26 @@ lbl_80259CF8:
 .global lbl_80259D00
 lbl_80259D00:
 	.skip 0x4
-.global lbl_80259D04
-lbl_80259D04:
+.global DrawDoneCB
+DrawDoneCB:
 	.skip 0x4
 .global lbl_80259D08
 lbl_80259D08:
 	.skip 0x4
-.global lbl_80259D0C
-lbl_80259D0C:
+.global FinishQueue
+FinishQueue:
 	.skip 0xC
-.global lbl_80259D18
-lbl_80259D18:
+.global __piReg
+__piReg:
 	.skip 0x4
-.global lbl_80259D1C
-lbl_80259D1C:
+.global __cpReg
+__cpReg:
 	.skip 0x4
-.global lbl_80259D20
-lbl_80259D20:
+.global __peReg
+__peReg:
 	.skip 0x4
-.global lbl_80259D24
-lbl_80259D24:
+.global __memReg
+__memReg:
 	.skip 0x4
 .global lbl_80259D28
 lbl_80259D28:

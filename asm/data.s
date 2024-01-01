@@ -966,8 +966,8 @@ lbl_80185D2C:
 .global lbl_80185D40
 lbl_80185D40:
 	.incbin "baserom.dol", 0x182D40, 0xC0
-.global lbl_80185E00
-lbl_80185E00:
+.global XYNTSC
+XYNTSC:
 	.incbin "baserom.dol", 0x182E00, 0x98
 .global lbl_80185E98
 lbl_80185E98:
@@ -996,14 +996,14 @@ lbl_801863B8:
 .global lbl_801863EC
 lbl_801863EC:
 	.incbin "baserom.dol", 0x1833EC, 0x19C
-.global lbl_80186588
-lbl_80186588:
+.global ErrorTable
+ErrorTable:
 	.incbin "baserom.dol", 0x183588, 0x478
 .global lbl_80186A00
 lbl_80186A00:
 	.incbin "baserom.dol", 0x183A00, 0x70
-.global lbl_80186A70
-lbl_80186A70:
+.global timing
+timing:
 	.incbin "baserom.dol", 0x183A70, 0x1F4
 .global lbl_80186C64
 lbl_80186C64:
@@ -1011,8 +1011,8 @@ lbl_80186C64:
 .global lbl_80186E24
 lbl_80186E24:
 	.incbin "baserom.dol", 0x183E24, 0x64
-.global lbl_80186E88
-lbl_80186E88:
+.global ResetFunctionInfo
+ResetFunctionInfo:
 	.incbin "baserom.dol", 0x183E88, 0x130
 .global lbl_80186FB8
 lbl_80186FB8:
@@ -1023,8 +1023,8 @@ lbl_80186FC8:
 .global lbl_80186FE8
 lbl_80186FE8:
 	.incbin "baserom.dol", 0x183FE8, 0x38
-.global lbl_80187020
-lbl_80187020:
+.global CardData
+CardData:
 	.incbin "baserom.dol", 0x184020, 0x160
 .global lbl_80187180
 lbl_80187180:
@@ -1050,17 +1050,17 @@ lbl_80187384:
 .global lbl_801873A0
 lbl_801873A0:
 	.incbin "baserom.dol", 0x1843A0, 0x1A0
-.global lbl_80187540
-lbl_80187540:
+.global GXNtsc480IntDf
+GXNtsc480IntDf:
 	.incbin "baserom.dol", 0x184540, 0x258
-.global lbl_80187798
-lbl_80187798:
+.global GXMpal480IntDf
+GXMpal480IntDf:
 	.incbin "baserom.dol", 0x184798, 0x1A4
-.global lbl_8018793C
-lbl_8018793C:
+.global GXPal528IntDf
+GXPal528IntDf:
 	.incbin "baserom.dol", 0x18493C, 0x1A4
-.global lbl_80187AE0
-lbl_80187AE0:
+.global GXEurgb60Hz480IntDf
+GXEurgb60Hz480IntDf:
 	.incbin "baserom.dol", 0x184AE0, 0xF0
 .global lbl_80187BD0
 lbl_80187BD0:
@@ -1089,8 +1089,8 @@ lbl_80187F80:
 .global lbl_801880EC
 lbl_801880EC:
 	.incbin "baserom.dol", 0x1850EC, 0xC0
-.global lbl_801881AC
-lbl_801881AC:
+.global GXResetFuncInfo
+GXResetFuncInfo:
 	.incbin "baserom.dol", 0x1851AC, 0x14
 .global lbl_801881C0
 lbl_801881C0:
