@@ -10,6 +10,8 @@ TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/src/Dundee/Collision/COL_Sphere.o    \
                                                     \
     $(OBJ_DIR)/asm/text_0x800037c0.o                \
+    $(OBJ_DIR)/src/Dundee/Misc/DUN_Fade.o           \
+    $(OBJ_DIR)/asm/text_0x80009f44.o                \
     $(OBJ_DIR)/src/text_0x8000af6c.o                \
     $(OBJ_DIR)/asm/text_0x8000afb4.o                \
     $(OBJ_DIR)/src/Main/APP_Main.o                  \
