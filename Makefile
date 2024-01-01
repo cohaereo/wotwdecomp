@@ -14,7 +14,7 @@ endif
 
 OBJ_DIR := build
 
-SRC_DIRS := src src/Main src/Dundee/Misc
+SRC_DIRS := src src/Main src/Dundee/Misc src/Dundee/Maths
 ASM_DIRS := asm asm/dvd asm/gx asm/ai asm/ar asm/vi
 
 # Inputs

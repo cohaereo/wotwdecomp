@@ -1,7 +1,7 @@
 #pragma once
 #include "types.h"
 
-typedef void (*volatile eventHandlerCallback_t)(u32, u32, u32);
+typedef void (*eventHandlerCallback_t)(u32, u32, u32);
 
 struct EventHandler {
     int type;

@@ -83,6 +83,16 @@ dontmangle __ASM void AttachEventHandler__13CEventManagerUiPFUiUiUi_v() {
     );
 }
 
+
+#if 0
+void CEventManager::PostEvent(u32 param_1, u32 param_2, u32 param_3) {
+    for(int i = 0; i != 20; i += 1) {
+        if ((this->mHandlerSlots[i] != 0) && ((this->mHandlers[i].type & param_1 >> 8) == param_1 >> 8)) {
+            this->mHandlers[i].handler(param_1, param_2, param_3);
+        }
+    }
+}
+#else
 dontmangle __ASM void PostEvent__13CEventManagerUiUiUi() {
     asm volatile(
     "stwu 1, -0x28(1)\t\n"
@@ -124,6 +134,7 @@ dontmangle __ASM void PostEvent__13CEventManagerUiUiUi() {
     "addi 1, 1, 0x28\t\n"
     );
 }
+#endif
 
 dontmangle __ASM void AddDelayedEventToQueue__13CEventManagerUiUiUiUi() {
     asm volatile(

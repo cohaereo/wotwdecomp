@@ -3,12 +3,18 @@ INIT_O_FILES :=                                     \
 
 TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/src/Dundee/Misc/DUN_Events.o         \
+    $(OBJ_DIR)/src/Dundee/Maths/DUN_VectorMath.o    \
+                                                    \
     $(OBJ_DIR)/asm/text_0x800037c0.o                \
     $(OBJ_DIR)/src/text_0x8000af6c.o                \
     $(OBJ_DIR)/asm/text_0x8000afb4.o                \
+                                                    \
     $(OBJ_DIR)/src/Main/APP_Main.o                  \
+                                                    \
     $(OBJ_DIR)/asm/text_0x8000f15c.o                \
+                                                    \
     $(OBJ_DIR)/src/Main/APP_Text.o                  \
+                                                    \
     $(OBJ_DIR)/asm/text_0x8001009c.o                \
                                                     \
     $(OBJ_DIR)/asm/dvd/dvdfs.o                      \
