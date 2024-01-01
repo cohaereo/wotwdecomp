@@ -1807,7 +1807,30 @@ lbl_80191738:
 /* _vt$unk */
 .global lbl_80191798
 lbl_80191798:
-	.incbin "baserom.dol", 0x18E798, 0x60
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x00000000
+	.long 0x800e4ad0
+	.long 0x00000000
+	.long LoadAndInitialiseData__6CLabSE
+	.long 0x00000000
+	.long 0x8006fb14
+	.long 0x00000000
+	.long 0x800701b8
+	.long 0x00000000
+	.long 0x8006fdc4
+	.long 0x00000000
+	.long 0x8006fbf4
+	.long 0x00000000
+	.long 0x800701bc
+	.long 0x00000000
+	.long 0x800700e4
+	.long 0x00000000
+	.long 0x800701c4
+	.long 0x00000000
+	.long 0x800701c8
+	.long 0x00000000
+	.long 0x00000000
 
 /* _vt$9CMarketSE */
 .global lbl_801917F8
