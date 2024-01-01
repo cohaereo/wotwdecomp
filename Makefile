@@ -15,7 +15,7 @@ endif
 OBJ_DIR := build
 
 SRC_DIRS := src
-ASM_DIRS := asm asm/dvd asm/gx
+ASM_DIRS := asm asm/dvd asm/gx asm/ai asm/ar asm/vi
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)

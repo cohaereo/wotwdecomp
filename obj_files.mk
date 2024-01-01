@@ -17,6 +17,17 @@ TEXT_O_FILES :=                                     \
                                                     \
     $(OBJ_DIR)/asm/text_0x80095d58.o                \
                                                     \
+    $(OBJ_DIR)/asm/vi/vi.o                          \
+                                                    \
+    $(OBJ_DIR)/asm/text_0x80098d84.o                \
+                                                    \
+    $(OBJ_DIR)/asm/Pad.o                            \
+    $(OBJ_DIR)/asm/ai/ai.o                          \
+    $(OBJ_DIR)/asm/ar/arq.o                         \
+    $(OBJ_DIR)/asm/ar/ar.o                          \
+                                                    \
+    $(OBJ_DIR)/asm/text_0x8009aa4c.o                \
+                                                    \
     $(OBJ_DIR)/asm/gx/GXFifo.o                      \
     $(OBJ_DIR)/asm/gx/GXAttr.o                      \
     $(OBJ_DIR)/asm/gx/GXMisc.o                      \
