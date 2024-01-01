@@ -62,7 +62,8 @@ TEXT_O_FILES :=                                     \
 CTORS_O_FILES :=                                    \
     $(OBJ_DIR)/asm/ctors.o
 
-RODATA_O_FILES :=                                   \
+RODATA_O_FILES :=                                       \
+    $(OBJ_DIR)/src/Dundee/Maths/DUN_VectorMath_data.o   \
     $(OBJ_DIR)/asm/rodata.o
 
 DATA_O_FILES :=                                     \

@@ -108,3 +108,9 @@ Entry Point: 0x80003100
 .string	"\str"
 .balign 4, 0
 .endm
+
+.macro	insertdata label datatype value
+.global \label
+\label:
+.\datatype \value
+.endm
