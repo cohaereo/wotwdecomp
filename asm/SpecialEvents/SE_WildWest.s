@@ -1551,9 +1551,9 @@ lbl_80078BEC:
 /* 80078C18 00075C18  4B FB 26 D1 */	bl AddControlPoint__7CCameraP5Vec3FT1b
 /* 80078C1C 00075C1C  98 7F 00 A1 */	stb r3, 0xa1(r31)
 lbl_80078C20:
-/* 80078C20 00075C20  3D 20 80 10 */	lis r9, lbl_800FC960@ha
+/* 80078C20 00075C20  3D 20 80 10 */	lis r9, u8FramesPerSecond@ha
 /* 80078C24 00075C24  3B C1 00 48 */	addi r30, r1, 0x48
-/* 80078C28 00075C28  80 69 C9 60 */	lwz r3, lbl_800FC960@l(r9)
+/* 80078C28 00075C28  80 69 C9 60 */	lwz r3, u8FramesPerSecond@l(r9)
 /* 80078C2C 00075C2C  3F A0 80 1A */	lis r29, 0x801a
 /* 80078C30 00075C30  3B 9F 00 AC */	addi r28, r31, 0xac
 /* 80078C34 00075C34  3B 7F 00 B4 */	addi r27, r31, 0xb4
@@ -1665,9 +1665,9 @@ lbl_80078DBC:
 /* 80078DD0 00075DD0  B0 1F 00 A2 */	sth r0, 0xa2(r31)
 /* 80078DD4 00075DD4  2C 09 00 00 */	cmpwi r9, 0
 /* 80078DD8 00075DD8  40 82 00 58 */	bne lbl_80078E30
-/* 80078DDC 00075DDC  3F A0 80 10 */	lis r29, lbl_800FC960@ha
+/* 80078DDC 00075DDC  3F A0 80 10 */	lis r29, u8FramesPerSecond@ha
 /* 80078DE0 00075DE0  3D 20 80 1A */	lis r9, g_pGameGlob@ha
-/* 80078DE4 00075DE4  80 7D C9 60 */	lwz r3, lbl_800FC960@l(r29)
+/* 80078DE4 00075DE4  80 7D C9 60 */	lwz r3, u8FramesPerSecond@l(r29)
 /* 80078DE8 00075DE8  81 69 5B 44 */	lwz r11, g_pGameGlob@l(r9)
 /* 80078DEC 00075DEC  54 64 08 3C */	slwi r4, r3, 1
 /* 80078DF0 00075DF0  3D 6B 00 03 */	addis r11, r11, 3
@@ -1712,8 +1712,8 @@ lbl_80078E30:
 /* 80078E88 00075E88  48 00 29 6D */	bl StartLevelSound__6CAudioi
 /* 80078E8C 00075E8C  7F C3 F3 78 */	mr r3, r30
 /* 80078E90 00075E90  48 00 34 61 */	bl musunk_FUN_8007c2f0
-/* 80078E94 00075E94  3D 20 80 10 */	lis r9, lbl_800FC960@ha
-/* 80078E98 00075E98  80 09 C9 60 */	lwz r0, lbl_800FC960@l(r9)
+/* 80078E94 00075E94  3D 20 80 10 */	lis r9, u8FramesPerSecond@ha
+/* 80078E98 00075E98  80 09 C9 60 */	lwz r0, u8FramesPerSecond@l(r9)
 /* 80078E9C 00075E9C  1C 00 00 06 */	mulli r0, r0, 6
 /* 80078EA0 00075EA0  B0 1F 00 A8 */	sth r0, 0xa8(r31)
 /* 80078EA4 00075EA4  48 00 00 C4 */	b lbl_80078F68

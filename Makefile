@@ -14,7 +14,7 @@ endif
 
 OBJ_DIR := build
 
-SRC_DIRS := src src/Main src/Dundee/Misc src/Dundee/Maths src/Dundee/Collision
+SRC_DIRS := src src/Main src/Dundee/Misc src/Dundee/Maths src/Dundee/Collision src/Dundee/Io src/Game src/Game/SpecialEvents
 ASM_DIRS := asm asm/dvd asm/gx asm/ai asm/ar asm/vi asm/SpecialEvents
 
 # Inputs
@@ -81,8 +81,6 @@ build_nolink: $(O_FILES)
 
 $(ELF): baserom.dol $(O_FILES) $(LDSCRIPT)
 	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) $(O_FILES)
-# The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
-	$(OBJCOPY) $@ $@
 
 $(OBJ_DIR)/%.o: %.s
 	$(AS) $(ASFLAGS) -o $@ $<

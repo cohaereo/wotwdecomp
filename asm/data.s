@@ -84,8 +84,8 @@ lbl_800FC5F8:
 .global lbl_800FC864
 lbl_800FC864:
 	.incbin "baserom.dol", 0xF9864, 0xFC
-.global lbl_800FC960
-lbl_800FC960:
+.global u8FramesPerSecond
+u8FramesPerSecond:
 	.incbin "baserom.dol", 0xF9960, 0x2
 .global lbl_800FC962
 lbl_800FC962:
@@ -1786,21 +1786,21 @@ lbl_80191738:
 	.long 0x00000000
 	.long LoadAndInitialiseData__10CKitchenSE
 	.long 0x00000000
-	.long 0x8006e554
+	.long Reset__10CKitchenSE
 	.long 0x00000000
 	.long 0x8006e61c
 	.long 0x00000000
-	.long 0x8006ed28
+	.long Process__10CKitchenSE
 	.long 0x00000000
-	.long 0x8006e96c
+	.long TestLevelSpecificCollision__10CKitchenSEP10COL_SPHEREP5Vec3F
 	.long 0x00000000
-	.long 0x8006fa88
+	.long TestIncidentalAICollision__10CKitchenSEP10COL_SPHEREP5Vec3F
 	.long 0x00000000
-	.long 0x8006f68c
+	.long Render__10CKitchenSE
 	.long 0x00000000
-	.long 0x8006e858
+	.long SwitchOff__10CKitchenSE
 	.long 0x00000000
-	.long 0x8006fa64
+	.long GetSpecialAIInfo__10CKitchenSEP21AI_AVOIDANCE_INSTANCEPUc
 	.long 0x00000000
 	.long 0x00000000
 

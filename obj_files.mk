@@ -9,6 +9,7 @@ TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/src/Dundee/Collision/COL_Triangle.o  \
     $(OBJ_DIR)/src/Dundee/Collision/COL_Sphere.o    \
                                                     \
+    $(OBJ_DIR)/src/Dundee/Io/CONT_Main.o            \
     $(OBJ_DIR)/asm/text_0x800037c0.o                \
     $(OBJ_DIR)/src/Dundee/Misc/DUN_Fade.o           \
     $(OBJ_DIR)/asm/text_0x80009f44.o                \
@@ -24,13 +25,15 @@ TEXT_O_FILES :=                                     \
     $(OBJ_DIR)/src/Main/APP_Text.o                  \
                                                     \
     $(OBJ_DIR)/asm/text_0x8001009c.o                \
+    $(OBJ_DIR)/src/Game/PLYR_Main.o                 \
+    $(OBJ_DIR)/asm/text_0x800449d8.o                \
     $(OBJ_DIR)/asm/SpecialEvents/SE_Banquet.o       \
     $(OBJ_DIR)/asm/SpecialEvents/SE_Beach.o         \
     $(OBJ_DIR)/asm/SpecialEvents/SE_Boxing.o        \
     $(OBJ_DIR)/asm/SpecialEvents/SE_Cabin.o         \
     $(OBJ_DIR)/asm/SpecialEvents/SE_Haunted.o       \
     $(OBJ_DIR)/asm/SpecialEvents/SE_Hell.o          \
-    $(OBJ_DIR)/asm/SpecialEvents/SE_Kitchen.o       \
+    $(OBJ_DIR)/src/Game/SpecialEvents/SE_Kitchen.o  \
     $(OBJ_DIR)/asm/SpecialEvents/SE_Lab.o           \
     $(OBJ_DIR)/asm/SpecialEvents/SE_EventClass.o    \
     $(OBJ_DIR)/asm/SpecialEvents/SE_Market.o        \

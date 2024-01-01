@@ -325,9 +325,9 @@ lbl_8006E0AC:
 /* 8006E0BC 0006B0BC  7F FA F2 14 */	add r31, r26, r30
 /* 8006E0C0 0006B0C0  7C 6B 1A 14 */	add r3, r11, r3
 /* 8006E0C4 0006B0C4  4B FD 55 95 */	bl TornadoHasControl__7CPlayer
-/* 8006E0C8 0006B0C8  3D 20 80 10 */	lis r9, lbl_800FC960@ha
+/* 8006E0C8 0006B0C8  3D 20 80 10 */	lis r9, u8FramesPerSecond@ha
 /* 8006E0CC 0006B0CC  57 6A 10 3A */	slwi r10, r27, 2
-/* 8006E0D0 0006B0D0  80 09 C9 60 */	lwz r0, lbl_800FC960@l(r9)
+/* 8006E0D0 0006B0D0  80 09 C9 60 */	lwz r0, u8FramesPerSecond@l(r9)
 /* 8006E0D4 0006B0D4  39 1F 00 2C */	addi r8, r31, 0x2c
 /* 8006E0D8 0006B0D8  7C 00 02 14 */	add r0, r0, r0
 /* 8006E0DC 0006B0DC  98 1F 00 28 */	stb r0, 0x28(r31)

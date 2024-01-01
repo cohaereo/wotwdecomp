@@ -63,8 +63,8 @@ LoadAndInitialiseData__10CBanquetSE:
 /* 80065CD4 00062CD4  7C 7E 1B 78 */	mr r30, r3
 /* 80065CD8 00062CD8  38 00 00 00 */	li r0, 0
 /* 80065CDC 00062CDC  98 1E 30 D4 */	stb r0, 0x30d4(r30)
-/* 80065CE0 00062CE0  3D 20 80 10 */	lis r9, lbl_800FC960@ha
-/* 80065CE4 00062CE4  80 69 C9 60 */	lwz r3, lbl_800FC960@l(r9)
+/* 80065CE0 00062CE0  3D 20 80 10 */	lis r9, u8FramesPerSecond@ha
+/* 80065CE4 00062CE4  80 69 C9 60 */	lwz r3, u8FramesPerSecond@l(r9)
 /* 80065CE8 00062CE8  1C 83 00 32 */	mulli r4, r3, 0x32
 /* 80065CEC 00062CEC  1C 63 00 28 */	mulli r3, r3, 0x28
 /* 80065CF0 00062CF0  4B F9 EF 29 */	bl DUN_RandomNumber__Fii
@@ -740,8 +740,8 @@ lbl_800666D4:
 /* 800666F4 000636F4  38 00 00 C7 */	li r0, 0xc7
 /* 800666F8 000636F8  98 1F 30 CD */	stb r0, 0x30cd(r31)
 lbl_800666FC:
-/* 800666FC 000636FC  3D 20 80 10 */	lis r9, lbl_800FC960@ha
-/* 80066700 00063700  80 69 C9 60 */	lwz r3, lbl_800FC960@l(r9)
+/* 800666FC 000636FC  3D 20 80 10 */	lis r9, u8FramesPerSecond@ha
+/* 80066700 00063700  80 69 C9 60 */	lwz r3, u8FramesPerSecond@l(r9)
 /* 80066704 00063704  1C 83 00 32 */	mulli r4, r3, 0x32
 /* 80066708 00063708  1C 63 00 28 */	mulli r3, r3, 0x28
 /* 8006670C 0006370C  4B F9 E5 0D */	bl DUN_RandomNumber__Fii

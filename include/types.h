@@ -1,3 +1,5 @@
+#pragma once
+
 typedef signed char s8;
 typedef signed short s16;
 typedef signed int s32;
@@ -5,6 +7,14 @@ typedef signed int s32;
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
+
+typedef float f32;
+
+struct Vec3F {
+    f32 x;
+    f32 y;
+    f32 z;
+};
 
 // typedef unsigned char bool;
 

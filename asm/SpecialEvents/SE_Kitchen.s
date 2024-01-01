@@ -240,13 +240,16 @@ lbl_8006E480:
 /* 8006E548 0006B548  BB 81 00 88 */	lmw r28, 0x88(r1)
 /* 8006E54C 0006B54C  38 21 00 98 */	addi r1, r1, 0x98
 /* 8006E550 0006B550  4E 80 00 20 */	blr 
+
+.global Reset__10CKitchenSE
+Reset__10CKitchenSE:
 /* 8006E554 0006B554  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8006E558 0006B558  7C 08 02 A6 */	mflr r0
 /* 8006E55C 0006B55C  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 8006E560 0006B560  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8006E564 0006B564  7C 7F 1B 78 */	mr r31, r3
-/* 8006E568 0006B568  3D 20 80 10 */	lis r9, lbl_800FC960@ha
-/* 8006E56C 0006B56C  80 69 C9 60 */	lwz r3, lbl_800FC960@l(r9)
+/* 8006E568 0006B568  3D 20 80 10 */	lis r9, u8FramesPerSecond@ha
+/* 8006E56C 0006B56C  80 69 C9 60 */	lwz r3, u8FramesPerSecond@l(r9)
 /* 8006E570 0006B570  3B A0 00 01 */	li r29, 1
 /* 8006E574 0006B574  1C 83 00 1E */	mulli r4, r3, 0x1e
 /* 8006E578 0006B578  1C 63 00 14 */	mulli r3, r3, 0x14
@@ -260,7 +263,7 @@ lbl_8006E480:
 /* 8006E598 0006B598  98 1F 00 08 */	stb r0, 8(r31)
 /* 8006E59C 0006B59C  38 80 00 00 */	li r4, 0
 /* 8006E5A0 0006B5A0  99 3F 00 DC */	stb r9, 0xdc(r31)
-/* 8006E5A4 0006B5A4  48 00 00 AD */	bl func_8006E650
+/* 8006E5A4 0006B5A4  48 00 00 AD */	bl ResetTextures__10CKitchenSEb
 /* 8006E5A8 0006B5A8  80 1F 00 BC */	lwz r0, 0xbc(r31)
 /* 8006E5AC 0006B5AC  2C 00 00 00 */	cmpwi r0, 0
 /* 8006E5B0 0006B5B0  40 82 00 40 */	bne lbl_8006E5F0
@@ -292,6 +295,9 @@ lbl_8006E608:
 /* 8006E610 0006B610  BB A1 00 14 */	lmw r29, 0x14(r1)
 /* 8006E614 0006B614  38 21 00 20 */	addi r1, r1, 0x20
 /* 8006E618 0006B618  4E 80 00 20 */	blr 
+
+.global lbl_8006E61C
+lbl_8006E61C:
 /* 8006E61C 0006B61C  94 21 FF F8 */	stwu r1, -8(r1)
 /* 8006E620 0006B620  7C 08 02 A6 */	mflr r0
 /* 8006E624 0006B624  90 01 00 0C */	stw r0, 0xc(r1)
@@ -306,8 +312,8 @@ lbl_8006E608:
 /* 8006E648 0006B648  38 21 00 08 */	addi r1, r1, 8
 /* 8006E64C 0006B64C  4E 80 00 20 */	blr 
 
-.global func_8006E650
-func_8006E650:
+.global ResetTextures__10CKitchenSEb
+ResetTextures__10CKitchenSEb:
 /* 8006E650 0006B650  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8006E654 0006B654  7C 08 02 A6 */	mflr r0
 /* 8006E658 0006B658  7D 80 00 26 */	mfcr r12
@@ -454,6 +460,9 @@ lbl_8006E83C:
 /* 8006E84C 0006B84C  7D 81 81 20 */	mtcrf 0x18, r12
 /* 8006E850 0006B850  38 21 00 70 */	addi r1, r1, 0x70
 /* 8006E854 0006B854  4E 80 00 20 */	blr 
+
+.global SwitchOff__10CKitchenSE
+SwitchOff__10CKitchenSE:
 /* 8006E858 0006B858  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8006E85C 0006B85C  7C 08 02 A6 */	mflr r0
 /* 8006E860 0006B860  BF 81 00 10 */	stmw r28, 0x10(r1)
@@ -528,6 +537,9 @@ lbl_8006E958:
 /* 8006E960 0006B960  BB 81 00 10 */	lmw r28, 0x10(r1)
 /* 8006E964 0006B964  38 21 00 20 */	addi r1, r1, 0x20
 /* 8006E968 0006B968  4E 80 00 20 */	blr 
+
+.global TestLevelSpecificCollision__10CKitchenSEP10COL_SPHEREP5Vec3F
+TestLevelSpecificCollision__10CKitchenSEP10COL_SPHEREP5Vec3F:
 /* 8006E96C 0006B96C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8006E970 0006B970  7C 08 02 A6 */	mflr r0
 /* 8006E974 0006B974  BF A1 00 34 */	stmw r29, 0x34(r1)
@@ -777,6 +789,9 @@ lbl_8006ED14:
 /* 8006ED1C 0006BD1C  BB A1 00 34 */	lmw r29, 0x34(r1)
 /* 8006ED20 0006BD20  38 21 00 40 */	addi r1, r1, 0x40
 /* 8006ED24 0006BD24  4E 80 00 20 */	blr 
+
+.global Process__10CKitchenSE
+Process__10CKitchenSE:
 /* 8006ED28 0006BD28  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8006ED2C 0006BD2C  7C 08 02 A6 */	mflr r0
 /* 8006ED30 0006BD30  DB E1 00 88 */	stfd f31, 0x88(r1)
@@ -1024,7 +1039,7 @@ lbl_8006F040:
 lbl_8006F09C:
 /* 8006F09C 0006C09C  7F E3 FB 78 */	mr r3, r31
 /* 8006F0A0 0006C0A0  38 80 00 01 */	li r4, 1
-/* 8006F0A4 0006C0A4  4B FF F5 AD */	bl func_8006E650
+/* 8006F0A4 0006C0A4  4B FF F5 AD */	bl ResetTextures__10CKitchenSEb
 /* 8006F0A8 0006C0A8  88 1F 00 08 */	lbz r0, 8(r31)
 /* 8006F0AC 0006C0AC  2C 00 00 01 */	cmpwi r0, 1
 /* 8006F0B0 0006C0B0  40 82 01 14 */	bne lbl_8006F1C4
@@ -1338,9 +1353,9 @@ lbl_8006F53C:
 lbl_8006F54C:
 /* 8006F54C 0006C54C  2C 04 00 00 */	cmpwi r4, 0
 /* 8006F550 0006C550  41 82 00 38 */	beq lbl_8006F588
-/* 8006F554 0006C554  3D 60 80 10 */	lis r11, lbl_800FC960@ha
+/* 8006F554 0006C554  3D 60 80 10 */	lis r11, u8FramesPerSecond@ha
 /* 8006F558 0006C558  3D 40 80 1A */	lis r10, g_pGameGlob@ha
-/* 8006F55C 0006C55C  80 0B C9 60 */	lwz r0, lbl_800FC960@l(r11)
+/* 8006F55C 0006C55C  80 0B C9 60 */	lwz r0, u8FramesPerSecond@l(r11)
 /* 8006F560 0006C560  81 2A 5B 44 */	lwz r9, g_pGameGlob@l(r10)
 /* 8006F564 0006C564  54 00 10 3A */	slwi r0, r0, 2
 /* 8006F568 0006C568  88 9F 00 DC */	lbz r4, 0xdc(r31)
@@ -1352,8 +1367,8 @@ lbl_8006F54C:
 /* 8006F580 0006C580  98 1F 00 DC */	stb r0, 0xdc(r31)
 /* 8006F584 0006C584  48 00 00 F0 */	b lbl_8006F674
 lbl_8006F588:
-/* 8006F588 0006C588  3D 20 80 10 */	lis r9, lbl_800FC960@ha
-/* 8006F58C 0006C58C  80 09 C9 60 */	lwz r0, lbl_800FC960@l(r9)
+/* 8006F588 0006C588  3D 20 80 10 */	lis r9, u8FramesPerSecond@ha
+/* 8006F58C 0006C58C  80 09 C9 60 */	lwz r0, u8FramesPerSecond@l(r9)
 /* 8006F590 0006C590  54 00 18 38 */	slwi r0, r0, 3
 /* 8006F594 0006C594  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 8006F598 0006C598  48 00 00 DC */	b lbl_8006F674
@@ -1376,8 +1391,8 @@ lbl_8006F5BC:
 /* 8006F5D4 0006C5D4  98 1F 00 08 */	stb r0, 8(r31)
 /* 8006F5D8 0006C5D8  4B FB AA 19 */	bl TIME_GetElapsedGameTime__Fv
 /* 8006F5DC 0006C5DC  7C 7E 1B 78 */	mr r30, r3
-/* 8006F5E0 0006C5E0  3D 20 80 10 */	lis r9, lbl_800FC960@ha
-/* 8006F5E4 0006C5E4  80 69 C9 60 */	lwz r3, lbl_800FC960@l(r9)
+/* 8006F5E0 0006C5E0  3D 20 80 10 */	lis r9, u8FramesPerSecond@ha
+/* 8006F5E4 0006C5E4  80 69 C9 60 */	lwz r3, u8FramesPerSecond@l(r9)
 /* 8006F5E8 0006C5E8  1C 83 00 1E */	mulli r4, r3, 0x1e
 /* 8006F5EC 0006C5EC  1C 63 00 14 */	mulli r3, r3, 0x14
 /* 8006F5F0 0006C5F0  4B F9 56 29 */	bl DUN_RandomNumber__Fii
@@ -1421,6 +1436,9 @@ lbl_8006F674:
 /* 8006F680 0006C680  CB E1 00 88 */	lfd f31, 0x88(r1)
 /* 8006F684 0006C684  38 21 00 90 */	addi r1, r1, 0x90
 /* 8006F688 0006C688  4E 80 00 20 */	blr 
+
+.global Render__10CKitchenSE
+Render__10CKitchenSE:
 /* 8006F68C 0006C68C  94 21 FF C8 */	stwu r1, -0x38(r1)
 /* 8006F690 0006C690  7C 08 02 A6 */	mflr r0
 /* 8006F694 0006C694  BF 21 00 1C */	stmw r25, 0x1c(r1)
@@ -1682,6 +1700,9 @@ lbl_8006FA50:
 /* 8006FA58 0006CA58  BB 21 00 1C */	lmw r25, 0x1c(r1)
 /* 8006FA5C 0006CA5C  38 21 00 38 */	addi r1, r1, 0x38
 /* 8006FA60 0006CA60  4E 80 00 20 */	blr 
+
+.global GetSpecialAIInfo__10CKitchenSEP21AI_AVOIDANCE_INSTANCEPUc
+GetSpecialAIInfo__10CKitchenSEP21AI_AVOIDANCE_INSTANCEPUc:
 /* 8006FA64 0006CA64  89 23 00 08 */	lbz r9, 8(r3)
 /* 8006FA68 0006CA68  39 29 FF FF */	addi r9, r9, -1
 /* 8006FA6C 0006CA6C  28 09 00 01 */	cmplwi r9, 1
@@ -1692,5 +1713,8 @@ lbl_8006FA50:
 lbl_8006FA80:
 /* 8006FA80 0006CA80  38 60 00 00 */	li r3, 0
 /* 8006FA84 0006CA84  4E 80 00 20 */	blr 
+
+.global TestIncidentalAICollision__10CKitchenSEP10COL_SPHEREP5Vec3F
+TestIncidentalAICollision__10CKitchenSEP10COL_SPHEREP5Vec3F:
 /* 8006FA88 0006CA88  38 60 00 00 */	li r3, 0
 /* 8006FA8C 0006CA8C  4E 80 00 20 */	blr 

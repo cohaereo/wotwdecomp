@@ -50,9 +50,9 @@ LoadAndInitialiseData__6CLabSE:
 /* 8006FB38 0006CB38  3B 9F 00 0C */	addi r28, r31, 0xc
 /* 8006FB3C 0006CB3C  4B FB A4 B5 */	bl TIME_GetElapsedGameTime__Fv
 /* 8006FB40 0006CB40  3B A0 00 00 */	li r29, 0
-/* 8006FB44 0006CB44  3D 20 80 10 */	lis r9, lbl_800FC960@ha
+/* 8006FB44 0006CB44  3D 20 80 10 */	lis r9, u8FramesPerSecond@ha
 /* 8006FB48 0006CB48  7C 7E 1B 78 */	mr r30, r3
-/* 8006FB4C 0006CB4C  80 09 C9 60 */	lwz r0, lbl_800FC960@l(r9)
+/* 8006FB4C 0006CB4C  80 09 C9 60 */	lwz r0, u8FramesPerSecond@l(r9)
 /* 8006FB50 0006CB50  1C 80 00 0A */	mulli r4, r0, 0xa
 /* 8006FB54 0006CB54  54 03 10 3A */	slwi r3, r0, 2
 /* 8006FB58 0006CB58  7C 63 02 14 */	add r3, r3, r0
@@ -270,9 +270,9 @@ lbl_8006FE6C:
 /* 8006FE88 0006CE88  99 7C 00 05 */	stb r11, 5(r28)
 /* 8006FE8C 0006CE8C  98 1C 00 04 */	stb r0, 4(r28)
 /* 8006FE90 0006CE90  4B FB A1 61 */	bl TIME_GetElapsedGameTime__Fv
-/* 8006FE94 0006CE94  3D 20 80 10 */	lis r9, lbl_800FC960@ha
+/* 8006FE94 0006CE94  3D 20 80 10 */	lis r9, u8FramesPerSecond@ha
 /* 8006FE98 0006CE98  7C 7E 1B 78 */	mr r30, r3
-/* 8006FE9C 0006CE9C  80 09 C9 60 */	lwz r0, lbl_800FC960@l(r9)
+/* 8006FE9C 0006CE9C  80 09 C9 60 */	lwz r0, u8FramesPerSecond@l(r9)
 /* 8006FEA0 0006CEA0  54 04 20 36 */	slwi r4, r0, 4
 /* 8006FEA4 0006CEA4  54 03 18 38 */	slwi r3, r0, 3
 /* 8006FEA8 0006CEA8  7C 80 20 50 */	subf r4, r0, r4

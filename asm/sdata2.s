@@ -1,5 +1,7 @@
 .section .sdata2  # 0x80259F80 - 0x8025AFC0
 
+.global lbl_80259F80
+lbl_80259F80:
 	.incbin "baserom.dol", 0x18FA60, 0x20
 .global lbl_80259FA0
 lbl_80259FA0:
