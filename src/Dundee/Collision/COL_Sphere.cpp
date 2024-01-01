@@ -1,11 +1,11 @@
 #include "types.h"
 
 #if 0
-dontmangle void func_800051EC() {
+dontmangle void COL_GetRaySphereIntersection__FP10COL_SPHEREP5Vec3FN21Pf() {
 
 }
 #else
-dontmangle __ASM void func_800051EC() {
+dontmangle __ASM void COL_GetRaySphereIntersection__FP10COL_SPHEREP5Vec3FN21Pf() {
 	asm volatile(
 		"stwu 1, -0x38(1)\t\n"
 		"mflr 0\t\n"
@@ -94,11 +94,11 @@ dontmangle __ASM void func_800051EC() {
 #endif
 
 #if 0
-dontmangle void func_80005328() {
+dontmangle void COL_GetRayPlaneIntersection__FP9PLANE_EQNP5Vec3FN21() {
 
 }
 #else
-dontmangle __ASM void func_80005328() {
+dontmangle __ASM void COL_GetRayPlaneIntersection__FP9PLANE_EQNP5Vec3FN21() {
 	asm volatile(
 		"mr 11, 3\t\n"
 		"lfs 13, 4(5)\t\n"
@@ -633,7 +633,7 @@ dontmangle __ASM void COL_DoSpherePlaneCollision__FP10COL_SPHEREP5Vec3FP16COLTRI
 		"fsubs 12, 12, 7\t\n"
 		"stfs 13, 0xac(1)\t\n"
 		"stfs 12, 0xb0(1)\t\n"
-		"bl func_80005328\t\n"
+		"bl COL_GetRayPlaneIntersection__FP9PLANE_EQNP5Vec3FN21\t\n"
 		"lbl_80005A88:\t\n"
 		"cmpwi 3, 0\t\n"
 		"beq lbl_80005D14\t\n"
@@ -694,7 +694,7 @@ dontmangle __ASM void COL_DoSpherePlaneCollision__FP10COL_SPHEREP5Vec3FP16COLTRI
 		"fdivs 13, 13, 31\t\n"
 		"stfs 12, 0xdc(1)\t\n"
 		"stfs 13, 0xe0(1)\t\n"
-		"bl func_800051EC\t\n"
+		"bl COL_GetRaySphereIntersection__FP10COL_SPHEREP5Vec3FN21Pf\t\n"
 		"mr 10, 22\t\n"
 		"cmpwi 3, 0\t\n"
 		"beq lbl_80005BF8\t\n"
@@ -1000,7 +1000,7 @@ dontmangle __ASM void COL_DoSpherePlaneCollision__FP10COL_SPHEREP5Vec3FP16COLTRI
 		"stw 9, 0xb8(1)\t\n"
 		"stw 0, 4(31)\t\n"
 		"stw 11, 8(31)\t\n"
-		"bl func_80005328\t\n"
+		"bl COL_GetRayPlaneIntersection__FP9PLANE_EQNP5Vec3FN21\t\n"
 		"lfs 11, 0x28(1)\t\n"
 		"mtcrf 0x80, 26\t\n"
 		"lfs 13, 0x78(1)\t\n"

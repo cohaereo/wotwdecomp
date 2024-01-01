@@ -15,8 +15,8 @@ lbl_800FB660:
 .global lbl_800FBC00
 lbl_800FBC00:
 	.incbin "baserom.dol", 0xF8C00, 0x5A0
-.global lbl_800FC1A0
-lbl_800FC1A0:
+.global gs_pCOL_MallocFUNC
+gs_pCOL_MallocFUNC:
 	.incbin "baserom.dol", 0xF91A0, 0x8
 .global lbl_800FC1A8
 lbl_800FC1A8:

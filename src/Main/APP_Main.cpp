@@ -117,7 +117,7 @@ dontmangle __ASM void APP_Initialise__Fv() {
 		"bl APP_WidescreenMode__Fb\t\n"
 		"lis 3, APP_Malloc__FUiUi@ha\t\n"
 		"addi 3, 3, APP_Malloc__FUiUi@l\t\n"
-		"bl func_80004D18\t\n"
+		"bl COL_RegisterMallocFunc__FPFUiUi_Pv\t\n"
 		"bl func_800C71E4\t\n"
 		"bl func_800B6A90\t\n"
 		"subfic 30, 3, 0x1000\t\n"

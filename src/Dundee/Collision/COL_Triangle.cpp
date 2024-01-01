@@ -1,11 +1,11 @@
 #include "types.h"
 
 #if 0
-dontmangle void func_80004D24() {
+dontmangle void COL_GetClosestPointOnLine__FP5Vec3FN30() {
 
 }
 #else
-dontmangle __ASM void func_80004D24() {
+dontmangle __ASM void COL_GetClosestPointOnLine__FP5Vec3FN30() {
 	asm volatile(
 		"stwu 1, -0x28(1)\t\n"
 		"lfs 0, 4(4)\t\n"
@@ -121,19 +121,19 @@ dontmangle __ASM void COL_ClosestPointOnTriangle__FP7COL_TRIP5Vec3FT1() {
 		"mr 4, 29\t\n"
 		"mr 5, 28\t\n"
 		"addi 30, 30, 0x28\t\n"
-		"bl func_80004D24\t\n"
+		"bl COL_GetClosestPointOnLine__FP5Vec3FN30\t\n"
 		"addi 6, 1, 0x24\t\n"
 		"mr 3, 29\t\n"
 		"stfs 1, 8(1)\t\n"
 		"mr 4, 30\t\n"
 		"mr 5, 28\t\n"
-		"bl func_80004D24\t\n"
+		"bl COL_GetClosestPointOnLine__FP5Vec3FN30\t\n"
 		"mr 3, 30\t\n"
 		"stfs 1, 0xc(1)\t\n"
 		"mr 4, 27\t\n"
 		"mr 5, 28\t\n"
 		"addi 6, 1, 0x30\t\n"
-		"bl func_80004D24\t\n"
+		"bl COL_GetClosestPointOnLine__FP5Vec3FN30\t\n"
 		"li 8, 3\t\n"
 		"lis 9, lbl_800EEC5C@ha\t\n"
 		"mtctr 8\t\n"
