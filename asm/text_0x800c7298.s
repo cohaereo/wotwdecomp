@@ -124,8 +124,8 @@ lbl_800C73E4:
 /* 800C743C 000C443C  38 21 00 30 */	addi r1, r1, 0x30
 /* 800C7440 000C4440  4E 80 00 20 */	blr 
 
-.global func_800C7444
-func_800C7444:
+.global sceOpen
+sceOpen:
 /* 800C7444 000C4444  94 21 FF 48 */	stwu r1, -0xb8(r1)
 /* 800C7448 000C4448  7C 08 02 A6 */	mflr r0
 /* 800C744C 000C444C  93 E1 00 B4 */	stw r31, 0xb4(r1)
@@ -237,8 +237,8 @@ lbl_800C75C4:
 /* 800C75D0 000C45D0  38 21 00 B8 */	addi r1, r1, 0xb8
 /* 800C75D4 000C45D4  4E 80 00 20 */	blr 
 
-.global func_800C75D8
-func_800C75D8:
+.global sceClose
+sceClose:
 /* 800C75D8 000C45D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800C75DC 000C45DC  7C 08 02 A6 */	mflr r0
 /* 800C75E0 000C45E0  BF C1 00 08 */	stmw r30, 8(r1)
@@ -270,8 +270,8 @@ lbl_800C7630:
 /* 800C7640 000C4640  38 21 00 10 */	addi r1, r1, 0x10
 /* 800C7644 000C4644  4E 80 00 20 */	blr 
 
-.global func_800C7648
-func_800C7648:
+.global sceRead
+sceRead:
 /* 800C7648 000C4648  94 21 FF F8 */	stwu r1, -8(r1)
 /* 800C764C 000C464C  7C 08 02 A6 */	mflr r0
 /* 800C7650 000C4650  90 01 00 0C */	stw r0, 0xc(r1)
@@ -297,8 +297,9 @@ lbl_800C7690:
 /* 800C7698 000C4698  38 21 00 08 */	addi r1, r1, 8
 /* 800C769C 000C469C  4E 80 00 20 */	blr 
 
-.global func_800C76A0
-func_800C76A0:
+/* sceLseek is originally a PS2 function. This is because the gamecube version of WotW is a port of the PS2 version */
+.global sceLseek
+sceLseek:
 /* 800C76A0 000C46A0  94 21 FF F8 */	stwu r1, -8(r1)
 /* 800C76A4 000C46A4  7C 08 02 A6 */	mflr r0
 /* 800C76A8 000C46A8  90 01 00 0C */	stw r0, 0xc(r1)
