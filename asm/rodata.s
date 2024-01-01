@@ -1,4 +1,5 @@
 .section .rodata  # 0x800EEB60 - 0x800FB580
+
 	.incbin "baserom.dol", 0xEBB60, 0x18
 .global lbl_800EEB78
 lbl_800EEB78:

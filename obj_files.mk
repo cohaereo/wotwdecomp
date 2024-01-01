@@ -2,6 +2,7 @@ INIT_O_FILES :=                                     \
     $(OBJ_DIR)/asm/init.o
 
 TEXT_O_FILES :=                                     \
+    $(OBJ_DIR)/src/test.o                           \
     $(OBJ_DIR)/asm/text.o                   		\
 
 CTORS_O_FILES :=                                    \
@@ -10,14 +11,14 @@ CTORS_O_FILES :=                                    \
 RODATA_O_FILES :=                                    \
     $(OBJ_DIR)/asm/rodata.o
 
-DATA2_O_FILES :=                                    \
-    $(OBJ_DIR)/asm/data2.o
+DATA_O_FILES :=                                    \
+    $(OBJ_DIR)/asm/data.o
 
-DATA3_O_FILES :=                                    \
-    $(OBJ_DIR)/asm/data3.o
+SDATA_O_FILES :=                                    \
+    $(OBJ_DIR)/asm/sdata.o
 
-DATA4_O_FILES :=                                    \
-    $(OBJ_DIR)/asm/data4.o
+SDATA2_O_FILES :=                                    \
+    $(OBJ_DIR)/asm/sdata2.o
 
 BSS_O_FILES :=                                      \
     $(OBJ_DIR)/asm/bss.o
